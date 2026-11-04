@@ -1,14 +1,19 @@
 const page=Number(document.body.dataset.page);let language='en',interest='tasting';
+const supportedLanguages=['en','de','uk'];
+const validLanguage=value=>typeof value==='string'&&supportedLanguages.includes(value);
+function initialLanguage(query,saved){return validLanguage(query)?query:validLanguage(saved)?saved:'en'}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function richText(value){return escapeHtml(value).replace(/&lt;(br|em|\/em)&gt;/g,'<$1>')}
 const safeRead=(store,key)=>{try{return store.getItem(key)}catch{return null}};
 const arrow='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
 const fill=(id,value)=>{const el=document.getElementById(id);if(el)el.innerHTML=value};
-function render(lang){language=lang;const t=copy[lang],n=pagesCopy[lang];document.documentElement.lang=lang;document.title=n.pageNames[page]+' | WHISKY ACADEMY';document.querySelector('meta[name=description]').content=page===1?n.authorIntro:page===4?n.projectsText:page===5?n.linkwoodText:page===6?n.contactsNote:n.collectionIntro;
-document.querySelectorAll('[data-t]').forEach(el=>el.innerHTML=t[el.dataset.t]||'');document.querySelectorAll('[data-n]').forEach(el=>el.textContent=n[el.dataset.n]);document.querySelectorAll('[data-fact]').forEach(el=>el.textContent=n.facts[el.dataset.fact]);document.querySelectorAll('[data-nav]').forEach(el=>el.textContent=n.nav[el.dataset.nav]);document.querySelectorAll('[data-page-title]').forEach(el=>el.textContent=n.pageNames[page]);document.querySelectorAll('[data-name]').forEach(el=>el.textContent=t.personName);document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.lang===lang)));
-fill('themes',n.themes.map((title,i)=>`<details><summary><span>0${i+1}</span><h3>${title}</h3>${arrow}</summary><p>${n.themeTexts[i]}</p></details>`).join(''));
-fill('specs',n.labels.map((label,i)=>`<div><dt>${label}</dt><dd>${n.values[i]}</dd></div>`).join(''));
-fill('experienceGrid',t.experiences.map((x,i)=>`<article class="experience-card"><div class="experience-photo"><img src="${x[4]}" alt="${x[0]}" loading="lazy"></div><span class="experience-number">0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p><a class="text-link" href="contact.html?lang=${lang}">${x[2]}${arrow}</a></article>`).join(''));
-fill('faqRows',t.faqs.map(x=>`<details><summary>${x[0]}${arrow}</summary><p>${x[1]}</p></details>`).join(''));
-fill('interestOptions',Object.entries(t.interests).map(([key,value])=>`<button type="button" data-choice="${key}" aria-pressed="${key===interest}">${value}</button>`).join(''));
+function render(lang){if(!validLanguage(lang))return;language=lang;const t=copy[lang],n=pagesCopy[lang];document.documentElement.lang=lang;document.title=n.pageNames[page]+' | WHISKY ACADEMY';document.querySelector('meta[name=description]').content=page===1?n.authorIntro:page===4?n.projectsText:page===5?n.linkwoodText:page===6?n.contactsNote:n.collectionIntro;
+document.querySelectorAll('[data-t]').forEach(el=>el.innerHTML=richText(t[el.dataset.t]||''));document.querySelectorAll('[data-n]').forEach(el=>el.textContent=n[el.dataset.n]);document.querySelectorAll('[data-fact]').forEach(el=>el.textContent=n.facts[el.dataset.fact]);document.querySelectorAll('[data-nav]').forEach(el=>el.textContent=n.nav[el.dataset.nav]);document.querySelectorAll('[data-page-title]').forEach(el=>el.textContent=n.pageNames[page]);document.querySelectorAll('[data-name]').forEach(el=>el.textContent=t.personName);document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.lang===lang)));
+fill('themes',n.themes.map((title,i)=>`<details><summary><span>0${i+1}</span><h3>${escapeHtml(title)}</h3>${arrow}</summary><p>${escapeHtml(n.themeTexts[i])}</p></details>`).join(''));
+fill('specs',n.labels.map((label,i)=>`<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(n.values[i])}</dd></div>`).join(''));
+fill('experienceGrid',t.experiences.map((x,i)=>`<article class="experience-card"><div class="experience-photo"><img src="${/^[a-z-]+\.jpg$/.test(x[4])?x[4]:'glass.jpg'}" alt="${escapeHtml(x[0])}" loading="lazy"></div><span class="experience-number">0${i+1}</span><h3>${escapeHtml(x[0])}</h3><p>${escapeHtml(x[1])}</p><a class="text-link" href="contact.html?lang=${lang}">${escapeHtml(x[2])}${arrow}</a></article>`).join(''));
+fill('faqRows',t.faqs.map(x=>`<details><summary>${escapeHtml(x[0])}${arrow}</summary><p>${escapeHtml(x[1])}</p></details>`).join(''));
+fill('interestOptions',Object.entries(t.interests).map(([key,value])=>`<button type="button" data-choice="${escapeHtml(key)}" aria-pressed="${key===interest}">${escapeHtml(value)}</button>`).join(''));
 if(page===6){document.querySelector('[data-t=formNote]').textContent=n.contactsNote;document.getElementById('formStatus').textContent=''}
 document.querySelectorAll('a[href]').forEach(a=>{const u=new URL(a.getAttribute('href'),location.href);if(u.origin===location.origin&&u.pathname.endsWith('.html')){u.searchParams.set('lang',lang);a.setAttribute('href',u.pathname.split('/').pop()+u.search+u.hash)}});
 document.querySelector('.menu').setAttribute('aria-label',t.menuLabel);document.querySelector('.skip').textContent=t.skipLabel;document.querySelector('.back-top').setAttribute('aria-label',t.topLabel);document.getElementById('nav').setAttribute('aria-label',t.navLabel);document.querySelectorAll('.languages').forEach(el=>el.setAttribute('aria-label',t.languageLabel));document.querySelector('.lightbox-close').setAttribute('aria-label',t.closePhoto);document.getElementById('lightbox').setAttribute('aria-label',t.photoDialog);
@@ -17,9 +22,9 @@ document.querySelectorAll('[data-t=founderP1]').forEach(el=>el.textContent=n.aut
 const imageAlts={'hero.png':0,'founder.jpg':3,'collection.jpg':4,'table.jpg':5,'glass.jpg':6,'bottle.jpg':7,'bottle-light.jpg':8};document.querySelectorAll('main img').forEach(el=>{const index=imageAlts[el.getAttribute('src')];if(index!==undefined)el.alt=photoTranslations[lang][index]});
 try{localStorage.setItem('wa-language',lang)}catch{}
 }
-render(copy[new URLSearchParams(location.search).get('lang')]?new URLSearchParams(location.search).get('lang'):copy[safeRead(localStorage,'wa-language')]?safeRead(localStorage,'wa-language'):'en');
+render(initialLanguage(new URLSearchParams(location.search).get('lang'),safeRead(localStorage,'wa-language')));
 const menu=document.querySelector('.menu'),nav=document.getElementById('nav');
-document.addEventListener('click',e=>{const lang=e.target.closest('[data-lang]');if(lang)render(lang.dataset.lang);const choice=e.target.closest('[data-choice]');if(choice){interest=choice.dataset.choice;document.querySelectorAll('[data-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b===choice)))}});
+document.addEventListener('click',e=>{const lang=e.target.closest('[data-lang]');if(lang)render(lang.dataset.lang);const choice=e.target.closest('[data-choice]');if(choice&&Object.hasOwn(copy[language].interests,choice.dataset.choice)){interest=choice.dataset.choice;document.querySelectorAll('[data-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b===choice)))}});
 menu.onclick=()=>{menu.setAttribute('aria-expanded',String(nav.classList.toggle('open')))};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
 const header=document.getElementById('header');const headerState=()=>header.classList.toggle('scrolled',scrollY>40);window.addEventListener('scroll',headerState,{passive:true});headerState();
