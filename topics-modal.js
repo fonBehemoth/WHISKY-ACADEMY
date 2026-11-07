@@ -9,8 +9,8 @@
   close.setAttribute('aria-label',words.close);dialog.querySelector('.eyebrow').textContent=words.label;
   if(active<0)return;
   const topic=whiskyTopics[active];title.textContent=pagesCopy[lang].themes[active];
-  body.replaceChildren(...topic[lang].map(text=>{const p=document.createElement('p');p.textContent=text;return p}));
-  const link=document.createElement('a');link.href=topic.source[1];link.target='_blank';link.rel='noopener noreferrer';link.textContent=words.source+' · '+topic.source[0];sources.replaceChildren(link);
+  body.replaceChildren(...topic[lang].map(text=>{const p=document.createElement('p');p.textContent=text;if(text===topic[lang][0])p.className='topic-subtitle';return p}));
+  sources.replaceChildren();
  }
  grid.addEventListener('click',event=>{
   const button=event.target.closest('[data-theme]');if(!button||!grid.contains(button)||document.getElementById('ageGate')?.hidden===false)return;
