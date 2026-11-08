@@ -16,6 +16,7 @@ fill('experienceGrid',t.experiences.map((x,i)=>`<article class="experience-card"
 fill('faqRows',t.faqs.map(x=>`<details><summary>${escapeHtml(x[0])}${arrow}</summary><p>${escapeHtml(x[1])}</p></details>`).join(''));
 fill('interestOptions',Object.entries(t.interests).map(([key,value])=>`<button type="button" data-choice="${escapeHtml(key)}" aria-pressed="${key===interest}">${escapeHtml(value)}</button>`).join(''));
 if(page===6){document.querySelector('[data-t=formNote]').textContent=n.contactsNote;document.getElementById('formStatus').textContent=''}
+window.renderHomePage?.(lang);
 window.renderAcademyContent?.(lang);
 document.querySelectorAll('a[href]').forEach(a=>{const u=new URL(a.getAttribute('href'),location.href);if(u.origin===location.origin&&u.pathname.endsWith('.html')){u.searchParams.set('lang',lang);const release=document.querySelector('meta[name="wa-release"]')?.content;if(release)u.searchParams.set('v',release);a.setAttribute('href',u.pathname.split('/').pop()+u.search+u.hash)}});
 document.querySelector('.menu').setAttribute('aria-label',t.menuLabel);document.querySelector('.skip').textContent=t.skipLabel;document.querySelector('.back-top').setAttribute('aria-label',t.topLabel);document.getElementById('nav').setAttribute('aria-label',t.navLabel);document.querySelectorAll('.languages').forEach(el=>el.setAttribute('aria-label',t.languageLabel));document.querySelector('.lightbox-close').setAttribute('aria-label',t.closePhoto);document.getElementById('lightbox').setAttribute('aria-label',t.photoDialog);
