@@ -1,0 +1,34 @@
+/* Native scroll drives the pinned gallery. No wheel events are cancelled. */
+.author-gallery{background:var(--bg);position:relative;border-bottom:1px solid var(--line);scroll-margin-top:125px}
+.author-gallery-pin{padding:35px 0 24px;display:flex;flex-direction:column;gap:22px}
+.author-gallery-heading{padding:0 6%;display:flex;align-items:end;justify-content:space-between;gap:30px}
+.author-gallery-heading .eyebrow{margin-bottom:10px}.author-gallery-heading h2{font-size:clamp(32px,3.5vw,48px);letter-spacing:-.6px}
+.author-gallery-hints{font-size:11px;color:var(--muted);letter-spacing:.3px}.author-gallery-desktop-hint{display:none}
+.author-gallery-viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:6vw;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;outline-offset:-4px}
+.author-gallery-viewport:focus-visible{outline:2px solid var(--gold)}
+.author-gallery-track{display:flex;gap:24px;width:max-content;padding:0 6vw}
+.author-gallery-card{margin:0;flex:0 0 auto;width:clamp(540px,66vw,1040px);scroll-snap-align:start}
+.author-gallery-image{height:clamp(300px,54svh,560px);background:#080b08;overflow:hidden}
+.author-gallery-image img{width:100%;height:100%;object-fit:contain}
+.author-gallery-card figcaption{display:flex;align-items:center;gap:20px;padding-top:14px;font-size:12px;color:var(--muted)}
+.author-gallery-card figcaption>span:first-child{color:var(--gold);font-size:10px;letter-spacing:1px}
+.author-gallery-footer{padding:0 6%;display:flex;align-items:center;gap:30px}
+.author-gallery-controls{display:none;align-items:center;gap:16px}.author-gallery.is-ready .author-gallery-controls{display:flex}
+.author-gallery-controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid var(--line);color:var(--gold);background:none}
+.author-gallery-controls button:hover:not(:disabled){border-color:var(--gold)}.author-gallery-controls button:disabled{opacity:.3;cursor:default}
+.author-gallery-count{font-size:10px;letter-spacing:1px;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted)}
+.author-gallery-progress{appearance:none;flex:1;min-width:20px;height:2px;border:0;background:#ffffff20;color:var(--gold)}
+.author-gallery-progress::-webkit-progress-bar{background:#ffffff20}.author-gallery-progress::-webkit-progress-value{background:var(--gold)}.author-gallery-progress::-moz-progress-bar{background:var(--gold)}
+.author-gallery-skip{display:flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.6px;color:var(--gold)}.author-gallery-skip svg{width:20px;height:20px}
+.author-gallery.is-pinned{height:var(--author-gallery-height)}
+.author-gallery.is-pinned .author-gallery-pin{position:sticky;top:var(--author-gallery-top);height:var(--author-gallery-pin-height);justify-content:center}
+.author-gallery.is-pinned .author-gallery-viewport{overflow:hidden;scroll-snap-type:none}
+.author-gallery.is-pinned .author-gallery-track{will-change:transform}
+.author-gallery.is-pinned .author-gallery-image{height:var(--author-gallery-image-height)}
+.author-gallery.is-pinned .author-gallery-desktop-hint{display:inline}.author-gallery.is-pinned .author-gallery-touch-hint{display:none}
+body[data-page="0"] .back-top{position:fixed;display:grid;place-items:center;top:auto;bottom:26px;right:26px;width:48px;height:48px;padding:0;z-index:30;border:1px solid var(--gold);background:#111310ed;color:var(--gold);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s}
+body[data-page="0"] .back-top.is-visible{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+body[data-page="0"] .back-top:hover{background:#2a2d22}
+@media(max-width:959px){.author-gallery-heading{align-items:start;flex-direction:column;gap:12px}.author-gallery-card{width:86vw}.author-gallery-track{gap:18px}.author-gallery-image{height:auto;aspect-ratio:3/2}.author-gallery-footer{gap:20px}.author-gallery-progress{display:none}.author-gallery-skip{margin-left:auto;text-align:right;max-width:48%;line-height:1.5}}
+@media(max-width:540px){.author-gallery-pin{padding:28px 0;gap:20px}.author-gallery-heading h2{font-size:34px}.author-gallery-card figcaption{font-size:11px;gap:12px}.author-gallery-controls{gap:10px}.author-gallery-footer{gap:14px}body[data-page="0"] .back-top{right:18px;bottom:18px;width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.author-gallery-viewport{scroll-behavior:auto}body[data-page="0"] .back-top{transition:none;transform:none}}
