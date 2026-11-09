@@ -1,4 +1,4 @@
-/* Four photographs, driven by ordinary document scroll. 9 November 2026. */
+/* Author photographs, driven by ordinary document scroll. 9 November 2026. */
 (()=>{
  'use strict';
  const section=document.getElementById('author-moments');if(!section)return;
