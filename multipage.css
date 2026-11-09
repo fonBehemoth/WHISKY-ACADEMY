@@ -36,3 +36,6 @@ header .wordmark{border:0;box-shadow:none}header .wordmark:focus-visible{outline
 /* Approved logo 007 age screen */
 .age-brand.wordmark{display:flex;justify-content:center;width:max-content;max-width:100%;margin:0 auto 40px;gap:18px;font-size:28px;letter-spacing:5px;color:var(--white)}.age-brand .brand-symbol{width:88px;height:88px}.age-brand .brand-name>span{font-size:9px;letter-spacing:0;margin-top:8px}
 @media(max-width:480px){.age-brand.wordmark{font-size:23px;gap:13px;letter-spacing:4px}.age-brand .brand-symbol{width:72px;height:72px}.age-brand .brand-name>span{font-size:8px}}
+
+/* Linkwood motion control */
+.project-promo iframe{position:absolute;inset:0;pointer-events:none}.project-promo-motion{position:absolute;z-index:2;right:12px;bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:10px 12px;border:1px solid #ffffff55;background:#111310d9;color:var(--white);font-size:10px}.project-promo-motion:hover{border-color:var(--gold);color:var(--gold)}.project-promo-motion svg{width:18px;height:18px}.project-promo-motion .promo-motion-play{fill:currentColor;stroke:none}.project-promo-motion .promo-motion-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
