@@ -14,7 +14,6 @@
   const label=video.paused?t.play:t.pause;motion.setAttribute('aria-label',label);motion.querySelector('.promo-motion-label').textContent=label;
   motion.querySelector('.promo-motion-play').hidden=!video.paused;motion.querySelector('.promo-motion-pause').hidden=video.paused;
   const loaded=source.hasAttribute('src');cover.hidden=loaded&&!failed;motion.hidden=!loaded||failed;
-  const direct=shell.parentElement.querySelector('.project-promo-direct');if(direct)direct.textContent=t.direct;
  }
  async function refresh(){
   if(failed||!allowed()||!wantsMotion()){video.pause();localize();return}

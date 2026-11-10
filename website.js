@@ -46,6 +46,8 @@ setGate(!(safeRead(localStorage,'wa-adult-v1')==='yes'||safeRead(sessionStorage,
 
 
 
+
+
 // Local validation start
 function localValidation(){const t=copy[document.documentElement.lang]||copy.en;document.querySelectorAll('#enquiry input,#enquiry textarea').forEach(el=>{el.setCustomValidity('');if(el.validity.valueMissing)el.setCustomValidity(t.requiredMessage);else if(el.validity.typeMismatch)el.setCustomValidity(t.emailMessage)})}document.getElementById('enquiry')?.addEventListener('input',localValidation);document.getElementById('enquiry')?.addEventListener('invalid',localValidation,true);window.addEventListener('wa:language',localValidation);
 // Local validation end
