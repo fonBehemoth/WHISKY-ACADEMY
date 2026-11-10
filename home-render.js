@@ -11,7 +11,7 @@ function homeFragments(lang){
   tastings:heading(d.tastingLabel,d.tastingTitle)+ps(d.tastingParagraphs),
   formats:d.formats.map((f,i)=>`<a class="home-format" href="tastings.html#${esc(f[2])}"><span class="eyebrow">0${i+1}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${arrow}</a>`).join(''),
   tastingCta:link('tastings.html',d.tastingCta),
-  collection:heading(d.collectionLabel,d.collectionTitle)+ps(d.collectionParagraphs),
+  collection:`<h2>${esc(d.collectionLabel)}</h2><p class="home-collection-intro">${esc(d.collectionTitle)}</p>`+ps(d.collectionParagraphs),
   collectionCta:link('collection.html',d.collectionCta),
   founder:heading(d.founderLabel,d.founderTitle)+ps(d.founderParagraphs)+link('author.html',d.founderCta),
   community:heading(d.communityLabel,d.communityTitle)+ps(d.communityParagraphs),

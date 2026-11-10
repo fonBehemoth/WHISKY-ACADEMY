@@ -1,5 +1,5 @@
 const page=Number(document.body.dataset.page);let language='en',interest='tasting';
-const supportedLanguages=['en','de','uk'];
+const supportedLanguages=['en','de','uk','fr','it'];
 const validLanguage=value=>typeof value==='string'&&supportedLanguages.includes(value);
 function initialLanguage(query,saved){return validLanguage(query)?query:validLanguage(saved)?saved:'en'}
 function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
@@ -40,3 +40,12 @@ document.getElementById('ageYes').onclick=()=>{try{sessionStorage.setItem('wa-ad
 document.getElementById('ageNo').onclick=()=>{document.getElementById('ageQuestion').hidden=true;document.getElementById('ageDeclined').hidden=false;document.getElementById('ageBack').focus()};document.getElementById('ageBack').onclick=()=>{document.getElementById('ageDeclined').hidden=true;document.getElementById('ageQuestion').hidden=false;document.getElementById('ageYes').focus()};
 document.getElementById('ageGate').addEventListener('keydown',e=>{if(e.key!=='Tab')return;const items=[...document.querySelectorAll('#ageGate button,#ageGate input')].filter(el=>el.getClientRects().length);const first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
 setGate(!(safeRead(localStorage,'wa-adult-v1')==='yes'||safeRead(sessionStorage,'wa-adult-v1')==='yes'));
+
+
+
+
+
+
+// Local validation start
+function localValidation(){const t=copy[document.documentElement.lang]||copy.en;document.querySelectorAll('#enquiry input,#enquiry textarea').forEach(el=>{el.setCustomValidity('');if(el.validity.valueMissing)el.setCustomValidity(t.requiredMessage);else if(el.validity.typeMismatch)el.setCustomValidity(t.emailMessage)})}document.getElementById('enquiry')?.addEventListener('input',localValidation);document.getElementById('enquiry')?.addEventListener('invalid',localValidation,true);window.addEventListener('wa:language',localValidation);
+// Local validation end

@@ -2,7 +2,7 @@
  const dialog=document.getElementById('topicDialog'),grid=document.getElementById('themes');
  if(!dialog||!grid)return;
  const title=dialog.querySelector('h2'),body=dialog.querySelector('.topic-body'),close=dialog.querySelector('.topic-close'),sources=dialog.querySelector('.topic-sources');
- const ui={en:{label:'BEYOND THE GLASS',source:'Read the source',close:'Close topic'},de:{label:'BEYOND THE GLASS',source:'Quelle lesen',close:'Thema schliessen'},uk:{label:'BEYOND THE GLASS',source:'Переглянути джерело',close:'Закрити тему'}};
+ const ui={"en":{"label":"BEYOND THE GLASS","source":"Read the source","close":"Close topic"},"de":{"label":"BEYOND THE GLASS","source":"Quelle lesen","close":"Thema schliessen"},"uk":{"label":"BEYOND THE GLASS","source":"Переглянути джерело","close":"Закрити тему"},"fr":{"label":"AU-DELÀ DU VERRE","source":"Consulter la source","close":"Fermer le sujet"},"it":{"label":"OLTRE IL BICCHIERE","source":"Leggi la fonte","close":"Chiudi l’argomento"}};
  let active=-1,opener=null;
  function localize(){
   const lang=Object.hasOwn(ui,document.documentElement.lang)?document.documentElement.lang:'en',words=ui[lang];

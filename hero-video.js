@@ -1,7 +1,7 @@
 // Local media only. No YouTube player, API, cookies or third-party frames.
 (()=>{
 const video=document.getElementById('heroVideo'),button=document.getElementById('heroMotion');if(!video||!button)return;
-const labels={en:{play:'Play video',pause:'Pause video'},de:{play:'Video abspielen',pause:'Video pausieren'},uk:{play:'Відтворити відео',pause:'Призупинити відео'}};
+const labels={"en":{"play":"Play video","pause":"Pause video"},"de":{"play":"Video abspielen","pause":"Video pausieren"},"uk":{"play":"Відтворити відео","pause":"Призупинити відео"},"fr":{"play":"Lire la vidéo","pause":"Mettre la vidéo en pause"},"it":{"play":"Riproduci il video","pause":"Metti in pausa il video"}};
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');let manualChoice=null,inView=true,failed=false;
 const wantsMotion=()=>manualChoice??(!reduced.matches&&!navigator.connection?.saveData);
 function label(){const text=(labels[document.documentElement.lang]||labels.en)[video.paused?'play':'pause'];button.setAttribute('aria-label',text);button.querySelector('.motion-label').textContent=text;button.querySelector('.motion-play').hidden=!video.paused;button.querySelector('.motion-pause').hidden=video.paused;button.hidden=failed;}

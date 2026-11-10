@@ -3,7 +3,7 @@
  const shell=document.getElementById('linkwoodPromoPlayer');if(!shell)return;
  const video=shell.querySelector('video'),source=video.querySelector('source'),cover=shell.querySelector('.project-promo-play'),motion=shell.querySelector('.project-promo-motion');
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- const words={en:{play:'Play Linkwood video',pause:'Pause Linkwood video',label:'Linkwood · Project film',direct:'Watch on YouTube'},de:{play:'Linkwood-Video abspielen',pause:'Linkwood-Video pausieren',label:'Linkwood · Projektfilm',direct:'Auf YouTube ansehen'},uk:{play:'Відтворити відео Linkwood',pause:'Призупинити відео Linkwood',label:'Linkwood · Відео проєкту',direct:'Дивитися на YouTube'}};
+ const words={"en":{"play":"Play Linkwood video","pause":"Pause Linkwood video","label":"Linkwood · Project film","direct":"Watch on YouTube"},"de":{"play":"Linkwood-Video abspielen","pause":"Linkwood-Video pausieren","label":"Linkwood · Projektfilm","direct":"Auf YouTube ansehen"},"uk":{"play":"Відтворити відео Linkwood","pause":"Призупинити відео Linkwood","label":"Linkwood · Відео проєкту","direct":"Дивитися на YouTube"},"fr":{"play":"Lire la vidéo Linkwood","pause":"Mettre la vidéo Linkwood en pause","label":"Linkwood · Film du projet","direct":"Regarder sur YouTube"},"it":{"play":"Riproduci il video Linkwood","pause":"Metti in pausa il video Linkwood","label":"Linkwood · Video del progetto","direct":"Guarda su YouTube"}};
  let manualChoice=null,inView=false,failed=false;
  const wantsMotion=()=>manualChoice??(!reduced.matches&&!navigator.connection?.saveData);
  const allowed=()=>document.getElementById('ageGate')?.hidden!==false&&document.visibilityState==='visible'&&inView;
