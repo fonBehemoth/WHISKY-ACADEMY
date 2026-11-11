@@ -9,7 +9,7 @@ function homeFragments(lang){
   proofs:d.proofs.slice(1).map(p=>`<div class="hero-proof"><strong>${esc(p[0])}</strong><span>${esc(p[1])}</span></div>`).join(''),
   philosophy:heading(d.philosophyLabel,d.philosophyTitle)+ps(d.philosophyParagraphs),
   tastings:heading(d.tastingLabel,d.tastingTitle)+ps(d.tastingParagraphs),
-  formats:d.formats.map((f,i)=>`<a class="home-format" href="tastings.html#${esc(f[2])}"><span class="eyebrow">0${i+1}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${arrow}</a>`).join(''),
+  formats:d.formats.map((f,i)=>`<a class="home-format" href="tastings.html#${esc(i===3?'main':f[2])}"><span class="eyebrow">0${i+1}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${arrow}</a>`).join(''),
   tastingCta:link('tastings.html',d.tastingCta),
   collection:`<h2>${esc(d.collectionLabel)}</h2><p class="home-collection-intro">${esc(d.collectionTitle)}</p>`+ps(d.collectionParagraphs),
   collectionCta:link('collection.html',d.collectionCta),
