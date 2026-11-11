@@ -1,0 +1,1 @@
+const fs=require('fs');const file='github-pages/project-linkwood.html';let html=fs.readFileSync(file,'utf8');html=html.replace(/<section class="section bottle-experience"[\s\S]*?<\/section>/,'').replace(/<script src="bottle-viewer\.js(?:\?[^"]*)?" defer><\/script>/,'');fs.writeFileSync(file,html);console.log('Removed rejected 3D prototype from the public page.');

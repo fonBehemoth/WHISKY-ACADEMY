@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="820" viewBox="155 130 780 820" role="img" aria-labelledby="title desc">
+  <title id="title">Переплетённая монограмма M и омега</title>
+  <desc id="desc">Векторная реконструкция варианта 5 по предоставленному изображению. Белые контуры на прозрачном фоне, без растра и шрифтов.</desc>
+  <g fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="6">
+    <g id="m-lower-tails">
+      <path d="M321 790 C309 850 288 900 235 911 H311 C338 889 351 849 361 810"/>
+      <path d="M769 790 C781 850 802 900 855 911 H779 C752 889 739 849 729 810"/>
+    </g>
+    <g id="omega">
+      <path id="omega-outer" d="M388 805 C267 756 195 640 195 505 C195 316 351 162 545 162 C739 162 895 316 895 505 C895 640 823 756 702 805"/>
+      <path id="omega-inner-top" d="M360 292 C411 244 475 215 545 215 C615 215 679 240 730 281"/>
+      <path id="omega-inner-left" d="M325 322 C283 374 260 438 260 505 C260 630 347 732 478 770 V844 H377"/>
+      <path id="omega-inner-right" d="M765 322 C807 374 830 438 830 505 C830 630 743 732 612 770 V844 H717"/>
+      <path id="omega-foot-left" d="M304 778 H202 V844 H284"/>
+      <path id="omega-foot-right" d="M786 778 H888 V844 H806"/>
+    </g>
+    <g id="letter-m">
+      <path id="m-upper-contour" d="M343 661 C352 573 361 457 370 362 C373 333 368 312 343 301 H420 L545 580 L675 301 H747 C722 312 717 333 720 362 C729 457 738 573 747 661"/>
+      <path id="m-inner-contour" d="M382 698 L410 386 L538 660 H552 L682 386 L710 698"/>
+    </g>
+  </g>
+</svg>

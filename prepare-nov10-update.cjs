@@ -1,0 +1,20 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),{spawnSync}=require('node:child_process');
+const source='D:/WHISKEY/Академия_Виски_№2_9_8_24_20261031T152920Z_1_001 (2)/Академия Виски №2 9.8.24';
+const magick='C:/Program Files/ImageMagick-7.1.2-Q16-HDRI/magick.exe';
+const convert=(input,file,size)=>{const r=spawnSync(magick,[input,'-auto-orient','-resize',size,'-strip','-quality','83','github-pages/'+file],{encoding:'utf8'});if(r.status)throw Error(r.stderr);const [width,height]=spawnSync(magick,['identify','-format','%w %h','github-pages/'+file],{encoding:'utf8'}).stdout.split(' ').map(Number);return {source:path.basename(input),file,width,height,bytes:fs.statSync('github-pages/'+file).size}};
+const photos=['АВТОР/Dressing_person_in_blazer_42060164_2K.jpg','АВТОР/Новая папка/IMG_3011_1_01.jpg','АВТОР/Новая папка/IMG_3026_1_01.jpg','АВТОР/Новая папка/IMG_3032_1_01.jpg','АВТОР/ротари_1.jpg'];
+fs.writeFileSync('assets/author-gallery-manifest.json',JSON.stringify(photos.map((p,i)=>convert(path.join(source,p),`author-slide-20261110-0${i+1}.webp`,'1600x1200>')),null,2));
+const tasting=fs.readdirSync(path.join(source,'ДЕГУСТАЦИИ')).filter(x=>/\.jpg$/i.test(x)).sort();
+fs.writeFileSync('assets/tasting-gallery-manifest.json',JSON.stringify(tasting.map((p,i)=>convert(path.join(source,'ДЕГУСТАЦИИ',p),`tasting-20261110-0${i+1}.webp`,'1280x1000>')),null,2));
+let svg=fs.readFileSync(path.join(source,'ЛОГО/LOGO__008.svg'),'utf8');if(/<script\b|<foreignObject\b|\son\w+\s*=|(?:href|src)\s*=\s*["'](?:https?:|data:|javascript:)/i.test(svg))throw Error('Unsafe SVG');svg=svg.replace(/<!DOCTYPE[\s\S]*?>/,'');fs.writeFileSync('assets/brand-symbol-008.svg',svg);fs.writeFileSync('github-pages/brand-symbol-008.svg',svg);
+const data=require('./home-copy.cjs');
+const updates={en:['13+ years','Selected Whiskies from a Personal Collection','Explore remarkable Whiskies tasted, studied and compared by Oleksandr Martynov over the years.'],de:['13+ Jahre','Ausgewählte Whiskys aus einer privaten Sammlung','Entdecken Sie aussergewöhnliche Whiskys, die Oleksandr Martynov im Laufe der Jahre verkostet, erforscht und verglichen hat.'],uk:['13+ років','Вибрані Віскі з особистої колекції','Відкрийте непересічні Віскі, які Олександр Мартинов протягом багатьох років дегустував, досліджував і порівнював.']};
+for(const [lang,u] of Object.entries(updates)){data[lang].proofs[1][0]=u[0];data[lang].collectionLabel=u[1];data[lang].collectionTitle=u[2];}
+fs.writeFileSync('home-copy.cjs','module.exports='+JSON.stringify(data,null,2)+';\n');
+const gallery=require('./author-gallery-copy.cjs');
+const extra={en:['With Oleksandr Martynov','Oleksandr Martynov in a blue blazer, holding a tasting glass','The Rotary community','A group of participants beside a Rotary banner'],de:['Mit Oleksandr Martynov','Oleksandr Martynov im blauen Sakko mit einem Degustationsglas','Die Rotary-Gemeinschaft','Eine Gruppe von Teilnehmenden neben einem Rotary-Banner'],uk:['З Олександром Мартиновим','Олександр Мартинов у синьому піджаку з дегустаційним келихом','Спільнота Ротарі','Учасники зустрічі біля банера Ротарі']};
+for(const [lang,g] of Object.entries(gallery)){const e=extra[lang];g.captions[0]=e[0];g.alts[0]=e[1];g.captions=[...g.captions.slice(0,4),e[2]];g.alts=[...g.alts.slice(0,4),e[3]];g.hint='';g.touchHint='';g.select=lang==='de'?'Foto auswählen':lang==='uk'?'Вибрати фото':'Select photograph';}
+fs.writeFileSync('author-gallery-copy.cjs','module.exports='+JSON.stringify(gallery,null,2)+';\n');
+for(const f of fs.readdirSync('github-pages').filter(x=>x.endsWith('.html'))){const p='github-pages/'+f;let s=fs.readFileSync(p,'utf8').replaceAll('brand-symbol-007.svg','brand-symbol-008.svg');fs.writeFileSync(p,s)}
+let script=fs.readFileSync('add-brand-symbol.cjs','utf8');script=script.replaceAll('brand-symbol-007','brand-symbol-008');fs.writeFileSync('add-brand-symbol.cjs',script);
+console.log('Prepared logo 008, five author slides, five tasting photographs and updated homepage copy.');

@@ -1,0 +1,4 @@
+/* Replacement collection: preserve complete photographs. */
+body[data-page="2"] .collection-image{height:auto;aspect-ratio:auto;min-height:0}body[data-page="2"] .collection-image img{width:100%;height:auto;object-fit:contain;display:block}
+.new-collection-archive{border-top:1px solid var(--line)}.new-collection-grid{columns:3;column-gap:26px}.new-collection-grid figure{display:inline-block;vertical-align:top;break-inside:avoid;width:100%;margin:0 0 34px}.new-collection-grid .gallery-item{display:block;width:100%;height:auto;aspect-ratio:auto;background:#0c0e0b}.new-collection-grid img{display:block;width:100%;height:auto;object-fit:contain;max-height:none}.new-collection-grid figcaption{font-size:12px;line-height:1.7;color:var(--muted);padding-top:12px}
+@media(max-width:900px){.new-collection-grid{columns:2;column-gap:18px}}@media(max-width:520px){.new-collection-grid{columns:1}.new-collection-grid figure{margin-bottom:28px}}

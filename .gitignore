@@ -1,0 +1,9 @@
+# Local tools and generated delivery archives
+video-tools/
+site/.openai/
+*.zip
+*.tar.gz
+__pycache__/
+*.pyc
+.env
+.env.*

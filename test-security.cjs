@@ -1,0 +1,11 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const prefix=fs.readFileSync('github-pages/website.js','utf8').split('const safeRead=')[0];const c={document:{body:{dataset:{page:'0'}}}};vm.runInNewContext(prefix+';globalThis.choose=initialLanguage;globalThis.rich=richText;',c);
+assert.equal(c.rich('Hello<br><em>whisky</em>'),'Hello<br><em>whisky</em>');
+for(const payload of ['<script>alert(1)</script>','<img src=x onerror=alert(1)>','<em onclick=alert(1)>text</em>']){assert.ok(!c.rich(payload).includes('<script'));assert.ok(!c.rich(payload).includes('<img'));assert.ok(!c.rich(payload).includes('<em onclick'))}
+for(const value of ['__proto__','constructor','toString','hasOwnProperty','<script>','EN','',null,undefined]){assert.equal(c.choose(value,value),'en');assert.equal(c.choose(value,'uk'),'uk')}
+for(const lang of ['en','de','uk','fr','it'])assert.equal(c.choose(lang,'de'),lang);
+const pages=fs.readdirSync('github-pages').filter(x=>x.endsWith('.html'));
+for(const page of pages){const html=fs.readFileSync('github-pages/'+page,'utf8');const meta=[...html.matchAll(/<meta http-equiv="Content-Security-Policy" content="([^"]+)">/g)];assert.equal(meta.length,1,page);const policy=meta[0][1];assert.ok(html.indexOf(meta[0][0])<html.indexOf('<script'),page+' CSP must precede scripts');for(const directive of ["default-src 'none'","script-src 'self'","connect-src 'none'","object-src 'none'","base-uri 'none'","form-action 'none'",page==='project-linkwood.html'?'frame-src https://www.youtube-nocookie.com':"frame-src 'none'"])assert.ok(policy.includes(directive));assert.ok(!policy.includes('unsafe-inline')&&!policy.includes('unsafe-eval'));assert.ok(!html.match(/<script\b[^>]*>\s*[^<\s]/i));assert.ok(!html.match(/\son[a-z]+\s*=/i));assert.ok(!html.includes('<noscript><style>'));assert.ok(html.includes('name="referrer" content="strict-origin-when-cross-origin"'))}
+const svg=fs.readFileSync('github-pages/logo.svg','utf8');assert.ok(!/<script\b|\bonload\s*=|javascript:|<foreignObject\b/i.test(svg));
+console.log('PASS: malicious/invalid language keys, strict CSP on seven pages, external scripts only, no inline handlers/styles in noscript, referrer policy, static SVG.');
+

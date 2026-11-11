@@ -1,0 +1,258 @@
+0|Le fondateur|Il fondatore
+1|La collection|La collezione
+2|Expériences|Esperienze
+3|Nous contacter|Contattaci
+4|Un voyage personnel dans l’univers du Whisky|Un viaggio personale nel mondo del Whisky
+5|L’Art de<br>Comprendre<br><em>le Whisky</em>|L’Arte di<br>Comprendere<br><em>il Whisky</em>
+6|Explorez l’univers du Whisky à travers des collections exceptionnelles, des recherches historiques et des dégustations comparatives guidées par le collectionneur et formateur Oleksandr Martynov.|Esplorate il mondo del Whisky attraverso collezioni straordinarie, ricerche storiche e degustazioni comparative guidate dal collezionista e divulgatore Oleksandr Martynov.
+7|Découvrir les dégustations|Scopri le degustazioni
+8|Découvrir notre univers|Scopri il nostro mondo
+9|FAITES DÉFILER POUR DÉCOUVRIR|SCORRI PER SCOPRIRE
+10|SAVOIR. CURIOSITÉ. PLAISIR D’ÊTRE ENSEMBLE.|CONOSCENZA. CURIOSITÀ. BUONA COMPAGNIA.
+11|La philosophie|La filosofia
+12|Bien plus qu’un spiritueux|Molto più di un distillato
+13|Chaque Whisky a<br><em>une histoire à raconter.</em>|Ogni Whisky ha<br><em>una storia da raccontare.</em>
+14|Un lieu, un artisan, le choix d’un fût. Des années de patience. Le Whisky ouvre une fenêtre sur les personnes et les lieux qui lui donnent naissance. Nous vous invitons à regarder de plus près, à déguster avec attention et à découvrir ce qui vous touche.|Un luogo, un artigiano, la scelta di una botte. Anni di pazienza. Il Whisky apre una finestra sulle persone e sui luoghi che gli danno vita. Vi invitiamo a osservare più da vicino, degustare con attenzione e scoprire ciò che vi colpisce.
+15|De la première impression à la finale, il reste toujours quelque chose à découvrir.|Dalla prima impressione al finale, c’è sempre qualcosa da scoprire.
+16|Rencontrer le fondateur|Incontra il fondatore
+17|La passion d’un collectionneur.<br><em>Le plaisir de découvrir ensemble.</em>|La passione di un collezionista.<br><em>Una scoperta condivisa.</em>
+18|Oleksandr a commencé par collectionner des Whiskies du monde entier. Sa curiosité l’a amené à approfondir l’histoire des marques, l’art de la distillation et le caractère des différentes éditions.|Oleksandr ha iniziato collezionando Whisky da tutto il mondo. La curiosità lo ha portato ad approfondire la storia dei marchi, l’arte della distillazione e il carattere delle singole edizioni.
+19|Au fil du temps, ce parcours personnel est devenu une expérience à partager. À travers les dégustations et les échanges, il fait découvrir aux novices comme aux passionnés toute la richesse du monde du Whisky.|Con il tempo, questo percorso personale è diventato un’esperienza da condividere. Attraverso degustazioni e conversazioni, accompagna principianti e appassionati alla scoperta del più ampio mondo del Whisky.
+20|OM Whisky Academy est née du désir de partager des connaissances, de l’expérience et le plaisir de la découverte.|OM Whisky Academy è nata dal desiderio di condividere conoscenze, esperienza e il piacere della scoperta.
+21|Découvrir la collection|Scopri la collezione
+22|Un monde de caractères|Un mondo di caratteri
+23|Des origines variées.<br><em>Des découvertes sans fin.</em>|Origini diverse.<br><em>Scoperte senza fine.</em>
+24|La collection réunit des gammes classiques et des éditions particulières de régions productrices du monde entier. Chaque bouteille permet de découvrir un lieu, un style et un regard différents.|La collezione riunisce gamme classiche e singole edizioni provenienti da regioni produttrici di tutto il mondo. Ogni bottiglia è un’occasione per esplorare un luogo, uno stile e un punto di vista diversi.
+25|Une sélection préparée pour une dégustation OM Whisky Academy|Una selezione preparata per una degustazione di OM Whisky Academy
+26|Au fil des régions du Whisky|Attraverso le regioni del Whisky
+27|Écosse · Irlande · Japon · Inde · Taïwan · France · Allemagne · Suède · Italie · Suisse · Espagne · Belgique · Finlande · Luxembourg · Israël · Australie · États-Unis · Canada|Scozia · Irlanda · Giappone · India · Taiwan · Francia · Germania · Svezia · Italia · Svizzera · Spagna · Belgio · Finlandia · Lussemburgo · Israele · Australia · Stati Uniti · Canada
+28|Trouvez votre point de départ|Trova il tuo punto di partenza
+29|Une passion.<br><em>Votre façon de l’explorer.</em>|Una passione.<br><em>Il tuo modo di esplorarla.</em>
+30|Apprendre, déguster, constituer une collection ou réunir des personnes. Commencez par ce qui vous intéresse.|Imparare, degustare, costruire una collezione o riunire persone. Iniziate da ciò che vi interessa.
+31|Au cœur de la dégustation|Dentro l’esperienza di degustazione
+32|Regarder de plus près.<br><em>Découvrir davantage.</em>|Osservare da vicino.<br><em>Scoprire di più.</em>
+33|Une dégustation est un dialogue entre ce que contient le verre et ce que vous y découvrez. Ces détails sont au cœur de l’expérience.|Una degustazione è un dialogo tra ciò che si trova nel bicchiere e ciò che vi scoprite. Questi dettagli sono al centro dell’esperienza.
+34|Un autre regard sur le Whisky · Formats personnalisés sur demande|Uno sguardo più attento al Whisky · Formati personalizzati su richiesta
+35|Parlons d’une dégustation|Parliamo di una degustazione
+36|Whisky et communauté|Whisky e comunità
+37|De bons Whiskies.<br><em>De belles conversations.</em>|Buon Whisky.<br><em>Belle conversazioni.</em>
+38|En 2023, un club d’amateurs de Whisky au sein de la communauté Rotary de Kharkiv a fait naître l’idée d’OM Whisky Academy. D’autres clubs ont suivi, réunissant des entrepreneurs autour d’une curiosité commune.|Nel 2023, un club di appassionati di Whisky nella comunità Rotary di Kharkiv ha dato origine all’idea di OM Whisky Academy. Sono seguiti altri club, riunendo imprenditori attraverso una curiosità condivisa.
+42|Club de Whisky|Club di Whisky
+43|Clubs de Whisky|Club di Whisky
+44|Oleksandr a contribué à inspirer la création de ces clubs et y a partagé ses connaissances comme intervenant invité et animateur de dégustations.|Oleksandr ha contribuito a ispirare la nascita dei club e ha condiviso le sue conoscenze come relatore ospite e conduttore di degustazioni.
+45|Réunissez votre communauté|Riunisci la tua comunità
+46|Le plaisir de découvrir|Il piacere della scoperta
+47|Certaines histoires se partagent mieux<br>autour d’un verre.|Alcune storie si condividono meglio<br>davanti a un bicchiere.
+48|Votre point de départ|Il tuo punto di partenza
+49|Un peu de curiosité<br><em>suffit pour commencer.</em>|Basta un po’<br><em>di curiosità.</em>
+50|Regarder de plus près|Uno sguardo più da vicino
+51|Le Whisky,<br><em>dans les détails.</em>|Il Whisky,<br><em>nei dettagli.</em>
+52|CHOISISSEZ UNE PHOTO POUR L’AGRANDIR|SELEZIONA UNA FOTO PER INGRANDIRLA
+53|Avant de nous rencontrer|Prima di incontrarci
+54|Quelques informations<br><em>à connaître.</em>|Alcune cose<br><em>da sapere.</em>
+55|Commencez votre découverte|Inizia la tua scoperta
+56|Trouvons ensemble<br><em>votre histoire de Whisky.</em>|Troviamo insieme<br><em>la tua storia di Whisky.</em>
+57|Une première dégustation, une nouvelle orientation pour votre collection ou une occasion à partager. Choisissez ce qui vous intéresse et parlez-nous de votre projet.|Una prima degustazione, una nuova direzione per la vostra collezione o un’occasione da condividere. Scegliete ciò che vi interessa e raccontateci la vostra idea.
+58|Que souhaitez-vous découvrir ?|Che cosa desiderate esplorare?
+59|Votre nom|Il tuo nome
+60|Adresse e-mail|Indirizzo e-mail
+61|Parlez-nous de votre projet|Raccontaci la tua idea
+62|Cet aperçu prépare une demande à télécharger. Il n’envoie pas vos coordonnées et ne confirme aucune réservation.|Questa anteprima prepara una richiesta da scaricare. Non invia i vostri dati e non conferma alcuna prenotazione.
+63|Préparer ma demande|Prepara la mia richiesta
+64|Le fichier de votre demande est prêt. Aucune information n’a été envoyée. Les coordonnées seront ajoutées avant l’ouverture des demandes.|Il file della richiesta è pronto. Nessuna informazione è stata inviata. I recapiti saranno aggiunti prima dell’apertura delle richieste.
+65|Un projet indépendant d’Oleksandr Martynov|Un progetto indipendente di Oleksandr Martynov
+66|DÉGUSTEZ AVEC DISCERNEMENT · RÉSERVÉ AUX ADULTES|DEGUSTA CON CONSAPEVOLEZZA · SOLO PER ADULTI
+67|Formation|Formazione
+68|Mieux comprendre l’histoire, les lieux et les savoir-faire du Whisky. Des premières questions à l’étude des différents styles.|Una comprensione più profonda della storia, dei luoghi e dell’arte del Whisky. Dalle prime domande all’esplorazione dei singoli stili.
+69|Découvrir les formations|Scopri la formazione
+72|Dégustations|Degustazioni
+73|Découvrez le Whisky à travers des comparaisons soigneusement choisies, des éditions particulières et les histoires qui se cachent derrière chaque verre.|Scoprite il Whisky attraverso confronti accuratamente scelti, singole edizioni e le storie dietro ogni bicchiere.
+76|Collections privées|Collezioni private
+77|Une approche personnelle de la collection : vos intérêts, vos préférences et une orientation qui vous ressemble.|Un approccio personale al collezionismo: i vostri interessi, le vostre preferenze e una collezione con una propria direzione.
+78|Parlons de votre collection|Parliamo della tua collezione
+81|Clubs et événements|Club ed eventi
+82|Réunissez des personnes pour découvrir ensemble. Rencontres privées, communautés d’affaires et conversations de fond.|Riunite persone per una scoperta condivisa. Incontri privati, comunità imprenditoriali e conversazioni ricche di contenuto.
+83|Organiser une rencontre|Organizza un incontro
+86|Le caractère|Il carattere
+87|Observez la couleur. Explorez les arômes. Prenez le temps de découvrir ce qui distingue chaque Whisky.|Osservate il colore. Esplorate gli aromi. Prendetevi il tempo di cogliere i dettagli che rendono diverso ogni Whisky.
+88|L’histoire|La storia
+89|Découvrez les choix derrière la bouteille : le lieu, le producteur, le fût et l’édition.|Scoprite le scelte dietro la bottiglia: il luogo, il produttore, la botte e l’edizione.
+91|La conversation|La conversazione
+92|Comparez vos impressions, posez des questions et trouvez vos propres mots pour décrire vos découvertes.|Confrontate le impressioni, fate domande e trovate le vostre parole per raccontare ciò che scoprite.
+93|Vous découvrez le Whisky|Alla scoperta del Whisky
+94|Commencez par la curiosité. Apprenez à mieux comprendre les styles et le spiritueux dans votre verre.|Iniziate dalla curiosità. Imparate a comprendere meglio gli stili e il distillato nel vostro bicchiere.
+95|Déjà passionné|Già appassionato
+96|Allez au-delà des bouteilles familières. Explorez d’autres producteurs, régions et éditions.|Andate oltre le bottiglie conosciute. Esplorate altri produttori, regioni ed edizioni.
+97|Vous constituez une collection|Costruire una collezione
+98|Donnez à votre collection une orientation personnelle, en accord avec vos intérêts.|Date alla vostra collezione una direzione personale, basata sui vostri interessi.
+99|Entreprises et communautés|Aziende e comunità
+100|Créez une expérience partagée qui laisse place aux histoires, aux questions et à la conversation.|Create un’esperienza condivisa che lasci spazio a storie, domande e conversazioni.
+101|Faut-il déjà connaître le Whisky ?|Devo già conoscere il Whisky?
+102|Le projet accueille aussi bien les novices que les passionnés. Parlez-nous de votre expérience pour envisager le format adapté.|Il progetto accoglie principianti e appassionati. Raccontateci la vostra esperienza per individuare il formato più adatto.
+103|Peut-on envisager un événement privé ou professionnel ?|Possiamo organizzare un evento privato o aziendale?
+104|Oui. Choisissez « Événements » ci-dessous et décrivez votre groupe ainsi que l’occasion envisagée.|Sì. Selezionate « Eventi » qui sotto e descrivete il gruppo e l’occasione che avete in mente.
+105|Où trouver les dates, tarifs et langues proposées ?|Dove trovo date, prezzi e lingue disponibili?
+106|Le calendrier, le lieu, les tarifs et les langues disponibles ne sont pas encore publiés. Ces informations seront ajoutées après confirmation.|Il calendario, il luogo, i prezzi e le lingue disponibili non sono ancora pubblicati. Queste informazioni saranno aggiunte dopo la conferma.
+107|Dégustation|Degustazione
+108|Collection|Collezione
+109|Événements|Eventi
+110|Avez-vous 18 ans ou plus ?|Hai almeno 18 anni?
+111|Ce site est réservé aux adultes. Veuillez confirmer votre âge pour continuer.|Questo sito è riservato agli adulti. Confermate la vostra età per continuare.
+112|Oui, entrer|Sì, entra
+113|Non|No
+114|Mémoriser mon choix sur cet appareil|Ricorda la mia scelta su questo dispositivo
+115|Ce site est réservé aux personnes de 18 ans et plus.|Questo sito è riservato ai visitatori dai 18 anni in su.
+116|Retour|Indietro
+117|Dégustez le Whisky de manière responsable.|Degustate il Whisky responsabilmente.
+118|UN MONDE À DÉCOUVRIR|UN MONDO DA SCOPRIRE
+121|Ouvrir le menu|Apri il menu
+122|Fermer la photo|Chiudi la foto
+123|Aller au contenu|Vai al contenuto
+124|Détail précédent de la dégustation|Dettaglio precedente della degustazione
+125|Détail suivant de la dégustation|Dettaglio successivo della degustazione
+126|Retour en haut|Torna in alto
+127|Navigation principale|Navigazione principale
+128|Langue|Lingua
+129|Ouvrir la photo|Apri la foto
+130|Photographie|Fotografia
+131|Détails de la dégustation|Dettagli della degustazione
+132|Veuillez remplir ce champ.|Compila questo campo.
+133|Veuillez saisir une adresse e-mail valide.|Inserisci un indirizzo e-mail valido.
+134|OM WHISKY ACADEMY — L’Art de comprendre le Whisky|OM WHISKY ACADEMY — L’Arte di comprendere il Whisky
+135|Découvrez le Whisky à travers les dégustations, les histoires et l’expérience personnelle du collectionneur Oleksandr Martynov.|Scoprite il Whisky attraverso degustazioni, storie e l’esperienza personale del collezionista Oleksandr Martynov.
+136|Plus de 2 000 Whiskies de sa collection personnelle — dégustés, étudiés et comparés|Oltre 2.000 Whisky della sua collezione personale — degustati, studiati e confrontati
+137|Plus d’une décennie de dégustations comparatives et de recherches|Oltre un decennio di degustazioni comparative e ricerca
+138|Explore le Whisky depuis 2013|Esplora il Whisky dal 2013
+139|Installé en Suisse|Vive in Svizzera
+140|L’auteur|L’autore
+141|Projets|Progetti
+142|Contact|Contatti
+143|Plus de 2 000 Whiskies|Oltre 2.000 Whisky
+144|Collectionneur depuis 2013|Colleziona dal 2013
+145|De Kharkiv à la Suisse. Un parcours personnel dans l’univers du Whisky.|Da Kharkiv alla Svizzera. Un viaggio personale nel mondo del Whisky.
+146|Oleksandr Martynov collectionne le Whisky depuis 2013. Aujourd’hui, sa collection privée compte plus de 2 000 Whiskies. Il s’intéresse à l’histoire des marques, à la distillation, à l’assemblage et au caractère des différentes éditions.|Oleksandr Martynov colleziona Whisky dal 2013. Oggi la sua collezione privata comprende oltre 2.000 Whisky. I suoi interessi spaziano dalla storia dei marchi alla distillazione, all’assemblaggio e al carattere delle singole edizioni.
+147|Un voyage qui se poursuit|Un viaggio che continua
+148|Les débuts|Gli inizi
+149|Collectionner le Whisky et explorer son histoire, ses origines et sa fabrication.|Collezionare Whisky ed esplorarne la storia, le origini e la produzione.
+150|Une curiosité partagée|Una curiosità condivisa
+151|Un club de Whisky au sein de la communauté Rotary de Kharkiv. D’autres clubs ont ensuite vu le jour à Kharkiv, Kyiv et Dnipro.|Un club di Whisky nella comunità Rotary di Kharkiv. Sono seguiti altri club a Kharkiv, Kyiv e Dnipro.
+152|Aujourd’hui|Oggi
+153|OM WHISKY ACADEMY réunit collection privée, formation, dégustations et projets.|OM WHISKY ACADEMY riunisce collezione privata, formazione, degustazioni e progetti.
+154|Plus de 2 000 Whiskies. Un voyage qui se poursuit.|Oltre 2.000 Whisky. Un viaggio che continua.
+155|Ces photographies présentent une sélection de bouteilles et de moments de dégustation du projet.|Le fotografie mostrano una selezione di bottiglie e momenti di degustazione del progetto.
+156|Au-delà du verre|Oltre il bicchiere
+157|Le Whisky comme moyen de découvrir l’histoire, les personnes et les idées. Les thèmes de dégustation proposés par l’auteur relient le contenu du verre à une histoire plus vaste.|Il Whisky come modo di esplorare la storia, le persone e le idee. I temi di degustazione ideati dall’autore collegano ciò che si trova nel bicchiere a una storia più ampia.
+158|LE WHISKY COMME REMÈDE|IL WHISKY COME RIMEDIO
+159|LE WHISKY COMME MÉDITATION|IL WHISKY COME MEDITAZIONE
+160|LE WHISKY COMME ACTIVITÉ ÉCONOMIQUE|IL WHISKY COME BUSINESS
+161|LES FEMMES DERRIÈRE LE WHISKY|LE DONNE DIETRO IL WHISKY
+162|LE WHISKY ET LA RELIGION|IL WHISKY E LA RELIGIONE
+163|LE WHISKY ET LA POLITIQUE|IL WHISKY E LA POLITICA
+164|WHISKY ET CÉLÉBRITÉS|WHISKY E CELEBRITÀ
+165|WHISKY ET FRANC-MAÇONNERIE|WHISKY E MASSONERIA
+166|L’ART DES GRANDS ASSEMBLAGES|L’ARTE DEI GRANDI BLEND
+167|WHISKY : L’ART DE LA TROMPERIE|WHISKY: L’ARTE DELL’INGANNO
+168|LE WHISKY JAPONAIS|IL WHISKY GIAPPONESE
+169|LE WHISKY INDIEN|IL WHISKY INDIANO
+170|LE WHISKY TAÏWANAIS|IL WHISKY TAIWANESE
+171|LE WHISKY EUROPÉEN|IL WHISKY EUROPEO
+172|LE WHISKY D’ISRAËL|IL WHISKY DI ISRAELE
+173|LE DÉFI VENU D’ORIENT|LA SFIDA D’ORIENTE
+174|Le rôle historique du Whisky dans la médecine et la société. Un sujet historique, pas un conseil de santé.|Il ruolo storico del Whisky nella medicina e nella società. Un tema storico, non un consiglio medico.
+175|L’attention, les arômes et une approche plus lente de la dégustation.|Attenzione, aromi e un approccio più lento alla degustazione.
+176|L’industrie du Whisky : marques, marchés et décisions derrière une bouteille.|L’industria del Whisky: marchi, mercati e decisioni dietro una bottiglia.
+177|Les femmes et leur place dans l’histoire et la fabrication du Whisky.|Le donne e il loro ruolo nella storia e nella produzione del Whisky.
+178|Les liens entre Whisky, croyances et traditions.|I legami tra Whisky, credenze e tradizioni.
+179|L’influence de la politique sur le Whisky et son histoire.|L’influenza della politica sul Whisky e sulla sua storia.
+180|Le Whisky à travers les histoires de personnalités célèbres.|Il Whisky attraverso le storie di personaggi famosi.
+181|Le Whisky sans frontières|Whisky senza frontiere
+182|Découvrez différentes cultures du Whisky : Japon, Inde, Taïwan, Europe et Israël.|Esplorate diverse culture del Whisky: Giappone, India, Taiwan, Europa e Israele.
+183|Le thème, la sélection et le format sont discutés individuellement.|Il tema, la selezione e il formato vengono concordati individualmente.
+184|Des idées qui prennent vie.|Idee che prendono vita.
+185|Des projets indépendants et des collaborations qui associent la curiosité du collectionneur au plaisir de découvrir ensemble.|Progetti indipendenti e collaborazioni che uniscono la curiosità del collezionista a un’esperienza condivisa.
+186|Un regard sur un fût unique.|Uno sguardo a una singola botte.
+187|Une édition Linkwood avec la participation d’Oleksandr Martynov. Une petite série de 68 bouteilles, liée à une distillerie, un fût et un moment précis.|Un’edizione Linkwood con la partecipazione di Oleksandr Martynov. Una piccola serie di 68 bottiglie, legata a una specifica distilleria, botte e momento.
+188|Découvrir le projet|Scopri il progetto
+189|L’édition en détail|L’edizione in dettaglio
+190|Distillerie|Distilleria
+191|Pays|Paese
+192|Région|Regione
+193|Type|Tipo
+194|Âge|Età
+195|Fût|Botte
+196|Distillé le|Distillato il
+197|Mis en bouteille le|Imbottigliato il
+198|Numéro du fût|Numero della botte
+199|Édition|Edizione
+201|Écosse|Scozia
+203|Whisky écossais single malt|Whisky scozzese single malt
+204|12 ans|12 anni
+206|25 février 2014|25 febbraio 2014
+207|1er septembre 2026|1 settembre 2026
+209|68 bouteilles|68 bottiglie
+210|Tous les projets|Tutti i progetti
+211|En savoir plus|Scopri di più
+212|Les coordonnées seront bientôt ajoutées. En attendant, vous pouvez enregistrer un brouillon de votre demande. Ce formulaire n’envoie aucun message.|I recapiti saranno aggiunti prossimamente. Per ora potete salvare una bozza della richiesta. Questo modulo non invia messaggi.
+213|L’Art de Comprendre le Whisky|L’Arte di Comprendere il Whisky
+214|Dégustations et formation|Degustazioni e formazione
+215|Linkwood — un projet autour d’un fût unique|Linkwood — un progetto da una singola botte
+216|Une collection privée|Una collezione privata
+217|Bouteilles et détails|Bottiglie e dettagli
+218|De la collection personnelle d’Oleksandr Martynov|Dalla collezione personale di Oleksandr Martynov
+219|2 000+|2.000+
+220|Whiskies de sa collection personnelle, dégustés, étudiés et comparés.|Whisky della sua collezione personale, degustati, studiati e confrontati.
+221|13+ ans|13+ anni
+222|De dégustations comparatives et de recherches.|Di degustazioni comparative e ricerca.
+224|Explore le Whisky depuis 2013.|Esplora il Whisky dal 2013.
+225|Suisse|Svizzera
+226|Le pays où vit Oleksandr.|Il paese in cui vive Oleksandr.
+227|Notre philosophie|La nostra filosofia
+228|Plus qu’une dégustation. Une compréhension plus profonde.|Più di una degustazione. Una comprensione più profonda.
+229|Le Whisky est bien plus qu’une boisson. Derrière chaque bouteille se trouve une histoire de savoir-faire, de géographie, de passé, de commerce et d’ambitions humaines.|Il Whisky è molto più di una bevanda. Dietro ogni bottiglia c’è una storia di artigianalità, geografia, passato, commercio e aspirazioni umane.
+230|À OM Whisky Academy, nous explorons ces liens à travers la recherche historique, la dégustation comparative et l’étude de collections remarquables de Whiskies.|A OM Whisky Academy esploriamo questi legami attraverso la ricerca storica, la degustazione comparativa e lo studio di straordinarie collezioni di Whisky.
+231|Notre approche va au-delà des notes de dégustation. Nous cherchons à comprendre ce qui rend chaque Whisky unique — et pourquoi.|Il nostro approccio va oltre le note di degustazione. Cerchiamo di capire che cosa rende unico ogni Whisky, e perché.
+232|Bouteille de The Famous Grouse Malt Whisky de 30 ans et son tube de présentation|Bottiglia di The Famous Grouse Malt Whisky di 30 anni e relativo astuccio
+233|Expériences de dégustation de Whisky|Esperienze di degustazione del Whisky
+234|Découvrez le Whisky au-delà du verre.|Scopri il Whisky oltre il bicchiere.
+235|Guidées par Oleksandr Martynov, nos dégustations associent comparaison, recherche historique et découverte des distilleries, des marques et d’éditions remarquables.|Guidate da Oleksandr Martynov, le nostre esperienze uniscono degustazione comparativa, ricerca storica ed esplorazione di distillerie, marchi ed edizioni straordinarie.
+236|Chaque rencontre est conçue pour révéler quelque chose de nouveau, que vous découvriez le Whisky ou souhaitiez approfondir une passion existante.|Ogni esperienza è pensata per rivelare qualcosa di nuovo, sia a chi scopre il Whisky per la prima volta sia a chi desidera approfondire una passione.
+237|Découvrir toutes les dégustations|Scopri tutte le degustazioni
+238|Dégustations privées de Whisky|Degustazioni private di Whisky
+239|Une dégustation conçue autour des intérêts de votre groupe privé.|Una degustazione costruita intorno agli interessi del vostro gruppo privato.
+241|Expériences pour les entreprises|Esperienze aziendali
+242|Des expériences autour du Whisky pour les équipes, les entreprises et les communautés d’affaires.|Esperienze di Whisky per team, aziende e comunità imprenditoriali.
+243|Événements thématiques autour du Whisky|Eventi tematici sul Whisky
+244|Histoire, culture, affaires et liens inattendus à travers le Whisky.|Storia, cultura, impresa e connessioni inattese attraverso il Whisky.
+246|Dégustations pédagogiques|Degustazioni formative
+247|Explorez la fabrication, les arômes et les saveurs par la dégustation comparative.|Esplorate produzione, aromi e sapori attraverso la degustazione comparativa.
+249|Une sélection de Whiskies d’une collection personnelle|Whisky selezionati da una collezione personale
+250|Découvrez des Whiskies remarquables, dégustés, étudiés et comparés par Oleksandr Martynov au fil des années.|Scoprite Whisky straordinari, degustati, studiati e confrontati da Oleksandr Martynov nel corso degli anni.
+251|Plus de 2 000 Whiskies de la collection personnelle d’Oleksandr Martynov — acquis, dégustés, étudiés et comparés pendant plus d’une décennie.|Oltre 2.000 Whisky della collezione personale di Oleksandr Martynov — acquistati, degustati, studiati e confrontati nell’arco di oltre un decennio.
+252|Des anciennes mises en bouteille aux éditions contemporaines, cette collection permet d’explorer l’évolution du Whisky, le caractère des distilleries et les différences entre les générations de production.|Dalle bottiglie storiche alle edizioni contemporanee, la collezione permette di esplorare l’evoluzione del Whisky, il carattere delle distillerie e le differenze tra generazioni produttive.
+253|Les bouteilles et leurs histoires|Le bottiglie e le loro storie
+254|Distilleries et éditions|Distillerie ed edizioni
+255|Whisky et dégustation|Whisky e degustazione
+256|Johnnie Walker Swing avec son coffret de présentation|Johnnie Walker Swing con la sua confezione
+257|Quatre bouteilles de Whisky de la collection personnelle|Quattro bottiglie di Whisky della collezione personale
+258|Haig Dimple avec un verre de dégustation|Haig Dimple con un bicchiere da degustazione
+259|La passion d’un collectionneur. Une découverte partagée.|La passione di un collezionista. Una scoperta condivisa.
+260|Le parcours d’Oleksandr Martynov dans le monde du Whisky a commencé par la collection de bouteilles de distilleries et de producteurs du monde entier. Cette passion personnelle est devenue des années de dégustations comparatives, de recherches historiques et d’étude des savoir-faire du Whisky.|Il percorso di Oleksandr Martynov nel mondo del Whisky è iniziato collezionando bottiglie di distillerie e produttori di tutto il mondo. Quella passione personale si è trasformata in anni di degustazioni comparative, ricerca storica e studio dell’arte del Whisky.
+261|Depuis 2013, il explore l’histoire des différentes éditions, des distilleries et des personnes qui ont façonné cette industrie.|Dal 2013 esplora le storie delle singole edizioni, delle distillerie e delle persone che hanno plasmato il settore.
+262|Aujourd’hui, à travers OM Whisky Academy, il partage cette expérience et transforme les découvertes personnelles en voyage collectif.|Oggi, attraverso OM Whisky Academy, condivide questa esperienza, trasformando le scoperte personali in un viaggio condiviso.
+263|Rencontrer Oleksandr|Incontra Oleksandr
+264|Réunir les personnes autour du Whisky.|Unire le persone attraverso il Whisky.
+265|En 2023, un club d’amateurs de Whisky au sein de la communauté Rotary de Kharkiv a inspiré l’idée d’OM Whisky Academy.|Nel 2023, un club di appassionati di Whisky nella comunità Rotary di Kharkiv ha ispirato l’idea di OM Whisky Academy.
+266|L’initiative est devenue une communauté plus large, avec des clubs de Whisky à Kyiv, Kharkiv et Dnipro.|L’iniziativa è cresciuta fino a creare una comunità più ampia, con club di Whisky a Kyiv, Kharkiv e Dnipro.
+267|Oleksandr y a participé comme intervenant invité et animateur de dégustations, partageant ses connaissances et réunissant des personnes autour d’un intérêt commun pour le Whisky.|Oleksandr ha partecipato come relatore ospite e conduttore di degustazioni, condividendo conoscenze e riunendo persone accomunate dall’interesse per il Whisky.
+268|De la collection à la création|Dalla collezione alla creazione
+269|Le projet Linkwood Single Cask.|Il progetto Linkwood Single Cask.
+270|Une édition spéciale issue d’un seul fût, développée avec la participation d’Oleksandr Martynov.|Un’edizione speciale da una singola botte, sviluppata con la partecipazione di Oleksandr Martynov.
+271|Limitée à 68 bouteilles, cette édition Linkwood 12 Years représente une distillerie, un fût et un moment précis.|Limitata a sole 68 bottiglie, questa edizione Linkwood 12 Years rappresenta una specifica distilleria, botte e momento.
+272|Un projet qui donne une forme concrète aux connaissances, à la sélection et à l’appréciation du Whisky.|Un progetto che dà forma concreta alla conoscenza, alla selezione e all’apprezzamento del Whisky.
+273|Linkwood · 12 ans|Linkwood · 12 anni
+274|Un seul fût · 68 bouteilles|Una sola botte · 68 bottiglie
+275|Découvrez le Whisky autrement.|Scopri il Whisky in modo diverso.
+276|Que vous découvriez le Whisky, exploriez une collection remarquable ou prépariez une dégustation privée, OM Whisky Academy vous invite à vivre le monde du Whisky sous un autre angle.|Che stiate scoprendo il Whisky per la prima volta, esplorando una collezione straordinaria o organizzando una degustazione privata, OM Whisky Academy vi invita a vivere il mondo del Whisky da una prospettiva diversa.
+277|Explorons le Whisky ensemble.|Esploriamo insieme il Whisky.
+278|Nous contacter|Contattaci
+279|Plus de 2 000 Whiskies de la collection privée — dégustés, étudiés et comparés|Oltre 2.000 Whisky della collezione privata — degustati, studiati e confrontati

@@ -1,0 +1,7 @@
+const fs=require('node:fs'),vm=require('node:vm');
+const ctx={};const read=n=>fs.readFileSync('github-pages/'+n,'utf8');
+vm.runInNewContext(read('locale-data.js')+read('page-data.js')+read('home-data.js')+read('academy-data.js')+read('author-gallery-data.js')+';globalThis.catalog={copy:copy.en,pagesCopy:pagesCopy.en,homeCopy:homeCopy.en,academyContent:academyContent.en,authorGalleryCopy:authorGalleryCopy.en,photoTranslations:photoTranslations.en};',ctx);
+const strings=[];const walk=x=>{if(typeof x==='string'){if(!strings.includes(x))strings.push(x)}else if(x&&typeof x==='object')Object.values(x).forEach(walk)};
+for(const [name,variable,marker] of [['new-collection.js','newCollectionCaptions','(()=>'],['tasting-gallery.js','tastingGalleryCopy','(()=>'],['linkwood-media.js','linkwoodMediaCopy','function localizeLinkwoodMedia']]){const c={};vm.runInNewContext(read(name).split(marker)[0]+`;globalThis.data=${variable}.en`,c);ctx.catalog[variable]=c.data;}
+for(const [name,variable] of [['hero-video.js','labels'],['project-promo-video.js','words'],['topics-modal.js','ui']]){const s=read(name).match(new RegExp('const '+variable+'=(\\{[^\\n]+?\\});'))[1];ctx.catalog[name]=vm.runInNewContext('('+s+')').en;}
+walk(ctx.catalog);fs.mkdirSync('localization',{recursive:true});fs.writeFileSync('localization/en-content.json',JSON.stringify(ctx.catalog,null,2));fs.writeFileSync('localization/en-strings.json',JSON.stringify(strings,null,2));console.log({entries:strings.length,characters:strings.join('').length});

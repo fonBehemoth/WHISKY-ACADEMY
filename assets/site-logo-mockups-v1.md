@@ -1,0 +1,16 @@
+# Макеты выбора логотипа
+
+2026-11-05. Built-in image_gen. Выходы: site-logo004-mockup-v1.png; site-logo005-mockup-v1.png. Не опубликованы. При генерации возможны небольшие отличия остальных пикселей от скриншота.
+
+## LOGO004 — исходный промпт
+
+Use case: precise-object-edit. Input image 1 is the edit target: a website screenshot, 1821x906 pixels. Input image 2 is the exact replacement logo artwork. Make ONE minimal edit: replace ONLY the small existing monogram logo at the top left of screenshot 1, approximately x=93..173 y=42..123, with input 2 scaled to the exact same 80x80-pixel bounds. Input 2 has a WHITE continuous outer omega band, white segmented inner band and GOLD filled serif M. Preserve those exact colours and silhouette; use transparent portions over the existing charcoal header. DO NOT change the adjacent WHISKY ACADEMY wordmark. DO NOT redraw, translate, correct or alter ANY screenshot text, navigation, spacing, typography, barrel background image, colours, green outer border, layout, lighting or other pixels. Preserve screenshot 1's full original canvas and framing, no added labels/captions, no crop, no collage, no extra logo. The only difference from screenshot 1 should be its top-left 80px logo, now faithfully showing supplied LOGO 004 with white outer band and gold M. Output a faithful website screenshot mockup for comparing logo choices, not a new website design.
+
+## LOGO004 — финальная правка
+
+Minimal precise colour edit. Input image1 is the finished screenshot mockup with an ALL WHITE small logo at the top-left. Change ONLY the letter M INSIDE that small top-left logo from white to a flat warm champagne GOLD (#c6ac68), matching image2. Keep both the outer omega ring and segmented inner omega ring PURE WHITE, not gold. Keep all white parts of the omega white. Do not change logo shape or size. The resulting logo must match image2: gold filled serif M surrounded by WHITE rings and white feet. IMPORTANT do not colour the outer ring gold. Preserve every other element in screenshot1 completely unchanged: wordmark, texts, fonts, Ukrainian wording, navigation, barrel photograph, layout, header, borders, exact screenshot canvas, framing and aspect ratio. No additional text or objects, no crop. Return one full website screenshot with gold M and all-white omega, option004.
+
+## LOGO005
+
+Precise screenshot edit, NOT a redesign. Image 1 is the website screenshot to preserve. Image 2 is the replacement logo. REPLACE the old small top-left gold-and-white logo with this ALL WHITE logo. The new logo must have a WHITE outer omega ring, WHITE segmented inner ring, and solid WHITE letter M, NO GOLD ANYWHERE WITHIN THE LOGO. Put it at exactly the existing logo position immediately to the left of WHISKY ACADEMY, with the same size (about80px square in a1821px screenshot). Copy the shape of image2 exactly, smooth white vector silhouette on transparent background against the dark header. The logo in image1 MUST visibly change to ALL WHITE. Keep ALL other elements exactly as image1, including adjacent WHISKY ACADEMY lettering, Ukrainian nav and hero text, background barrel photograph, header colour, original full canvas and framing. No added labels, no crop, no new text. Return one full screenshot mockup for option LOGO005.
+

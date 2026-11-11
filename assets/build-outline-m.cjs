@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+const path=require('node:path');
+// Manually redrawn from WhatsApp Image 2026-11-04 at 20.53.01.jpeg.
+const defs=`<defs><linearGradient id="champagne-gold" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f1e7c2"/><stop offset=".3" stop-color="#d9c89c"/><stop offset=".66" stop-color="#ac946c"/><stop offset="1" stop-color="#c5ad81"/></linearGradient></defs>`;
+const m=`<g id="letter-m" fill="none" stroke="url(#champagne-gold)" stroke-width="24" stroke-linejoin="round" stroke-linecap="butt"><path d="M254 610L288 245H315Q337 245 352 278L500 550L648 278Q663 245 685 245H712L746 610"/><path d="M309 658L342 361L500 695L658 361L691 658"/></g>`;
+const omega=`<path id="omega-outline" d="M375 784H82V670C102 690 125 712 150 712H307C195 638 115 529 115 396C115 190 286 29 500 29C714 29 885 190 885 396C885 529 805 638 693 712H850C875 712 898 690 918 670V784H625C625 727 631 695 670 668C779 595 824 504 824 396C824 223 681 93 500 93C319 93 176 223 176 396C176 504 221 595 330 668C369 695 375 727 375 784Z
+M353 762C350 727 343 708 316 690C204 615 154 514 154 396C154 211 306 71 500 71C694 71 846 211 846 396C846 514 796 615 684 690C657 708 650 727 647 762H896V713C883 725 868 734 850 734H674C667 734 668 720 680 711C798 635 863 527 863 396C863 203 702 51 500 51C298 51 137 203 137 396C137 527 202 635 320 711C332 720 333 734 326 734H150C132 734 117 725 104 713V762Z" fill-rule="evenodd"/>`;
+function svg(full){const vb=full?'50 0 900 820':'215 210 570 520';return `<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="${full?900:570}" height="${full?820:520}" viewBox="${vb}" role="img" aria-labelledby="title desc"><title id="title">${full?'Outline omega and M monogram':'Stylised outline M'}</title><desc id="desc">Manual vector reconstruction from the supplied reference. Transparent background; letter drawn as a path, without fonts or embedded raster.</desc>${defs}<g fill="url(#champagne-gold)">${full?omega:''}${m}</g></svg>\n`;}
+fs.writeFileSync(path.join(__dirname,'letter-m-outline-v1.svg'),svg(false));
+fs.writeFileSync(path.join(__dirname,'omega-m-outline-v1.svg'),svg(true));

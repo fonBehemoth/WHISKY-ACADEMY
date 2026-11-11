@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const h=fs.readFileSync('github-pages/collection.html','utf8'),main=h.match(/<main[^>]*>([\s\S]*?)<\/main>/)[1];
+const pictures=[...main.matchAll(/<img\b[^>]*src="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(pictures.length,20);assert.equal(new Set(pictures).size,19);assert.ok(pictures.every(p=>/^collection-new-\d{2}\.webp$/.test(p)));
+assert.equal((main.match(/data-photo="collection-new-/g)||[]).length,19);assert.ok(!main.includes('collection-photo-'));assert.ok(!main.includes('src="collection.jpg"'));
+assert.ok(main.includes('data-t="origins"'));
+for(const p of pictures)assert.ok(fs.existsSync('github-pages/'+p));
+const c={window:{addEventListener(){}},document:{documentElement:{lang:'en'},querySelectorAll:()=>[]}};vm.runInNewContext(fs.readFileSync('github-pages/new-collection.js','utf8')+';globalThis.captions=newCollectionCaptions',c);for(const lang of ['en','de','uk','fr','it'])assert.equal(c.captions[lang].length,19);
+const home=fs.readFileSync('github-pages/index.html','utf8'),collection=home.match(/<section[^>]*id="collection">[\s\S]*?<\/section>/)[0];assert.equal((collection.match(/src="collection-new-/g)||[]).length,3);
+console.log('PASS: 19 replacement photos, full-image lightbox links, translated captions, new homepage collection images and retained countries.');

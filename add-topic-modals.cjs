@@ -1,0 +1,17 @@
+const fs=require('node:fs'),path=require('node:path');const dir=path.join(__dirname,'github-pages');
+const sitePath=path.join(dir,'website.js');let js=fs.readFileSync(sitePath,'utf8');
+const old="fill('themes',n.themes.map((title,i)=>`<details><summary><span>0${i+1}</span><h3>${escapeHtml(title)}</h3>${arrow}</summary><p>${escapeHtml(n.themeTexts[i])}</p></details>`).join(''));";
+const next="fill('themes',n.themes.map((title,i)=>`<button type=\"button\" class=\"theme-trigger\" data-theme=\"${i}\" aria-haspopup=\"dialog\" aria-controls=\"topicDialog\"><span class=\"theme-number\">0${i+1}</span><span class=\"theme-name\">${escapeHtml(title)}</span>${arrow}</button>`).join(''));";
+if(!js.includes('class="theme-trigger"')){if(!js.includes(old))throw new Error('Topic template not found');js=js.replace(old,next)}fs.writeFileSync(sitePath,js);
+const pagePath=path.join(dir,'tastings.html');let html=fs.readFileSync(pagePath,'utf8');
+const modal='<dialog id="topicDialog" class="topic-dialog" aria-labelledby="topicTitle"><button type="button" class="icon-button topic-close" aria-label="Close topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button><p class="eyebrow">BEYOND THE GLASS</p><h2 id="topicTitle"></h2><div class="topic-body"></div><div class="topic-sources"></div></dialog>';
+if(!html.includes('id="topicDialog"'))html=html.replace('</body>',modal+'</body>');
+if(!html.includes('topics-modal.js'))html=html.replace('</head>','<script src="topics-data.js" defer></script><script src="topics-modal.js" defer></script></head>');fs.writeFileSync(pagePath,html);
+const cssPath=path.join(dir,'multipage.css');let css=fs.readFileSync(cssPath,'utf8');
+if(!css.includes('/* Topic modals */'))css+=`\n/* Topic modals */
+.theme-trigger{display:flex;align-items:center;gap:20px;width:100%;padding:28px 0;min-height:120px;text-align:left;border:0;border-top:1px solid var(--line);color:var(--white);background:none}.theme-trigger .theme-number{font-size:10px;color:var(--gold)}.theme-trigger .theme-name{flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;line-height:1.15}.theme-trigger>svg{color:var(--gold);transition:transform .25s}.theme-trigger:hover>svg{transform:translateX(5px)}.theme-trigger:hover .theme-name{color:var(--gold)}
+.topic-open{overflow:hidden}.topic-dialog{color:var(--white);width:760px;max-width:calc(100vw - 40px);max-height:calc(100svh - 48px);padding:64px 56px 44px;overflow:auto;border:1px solid var(--line);overscroll-behavior:contain}.topic-dialog::backdrop{background:#050805d9;backdrop-filter:blur(8px)}.topic-dialog .topic-close{position:absolute;top:16px;right:16px;width:40px;height:40px;background:#191c17}.topic-dialog .eyebrow{margin-bottom:20px}.topic-dialog h2{font-size:clamp(34px,4vw,52px);margin-bottom:30px;line-height:1.1}.topic-body p{font-size:14px;line-height:1.9}.topic-sources{border-top:1px solid var(--line);padding-top:22px;margin-top:30px;font-size:11px;line-height:1.8}.topic-sources a{color:var(--gold);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+@media(max-width:720px){.theme-trigger{min-height:100px;gap:14px}.theme-trigger .theme-name{font-size:27px}.topic-dialog{padding:62px 24px 30px;max-width:calc(100vw - 24px);max-height:calc(100svh - 24px)}.topic-body p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.theme-trigger>svg{transition:none}}
+`;
+fs.writeFileSync(cssPath,css);console.log('Topic dialog and accessible triggers installed.');

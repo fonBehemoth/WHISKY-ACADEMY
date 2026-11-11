@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-preview-lang]').forEach(b=>b.onclick=()=>{const lang=b.dataset.previewLang;document.documentElement.lang=lang;document.querySelectorAll('[data-theme]').forEach(e=>e.querySelector('.theme-name').textContent=pagesCopy[lang].themes[Number(e.dataset.theme)]);window.dispatchEvent(new CustomEvent('wa:language',{detail:lang}))});

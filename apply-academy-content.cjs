@@ -1,0 +1,32 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const dir=path.join(__dirname,'github-pages');
+const c={pagesCopy:{en:{},de:{},uk:{},fr:{},it:{}}};
+vm.runInNewContext(fs.readFileSync(path.join(dir,'academy-data.js'),'utf8')+fs.readFileSync(path.join(dir,'academy-render.js'),'utf8')+';globalThis.fragments=academyFragments("en");globalThis.content=academyContent;',c);
+const f=c.fragments;
+const file=p=>path.join(dir,p);
+function enhanceHead(h){
+ h=h.replace(/<script src="academy-(?:data|render)\.js(?:\?[^"]*)?" defer><\/script>/g,'').replace(/<link rel="stylesheet" href="academy-content\.css(?:\?[^"]*)?">/g,'');
+ h=h.replace(/(<script src="website\.js(?:\?[^"]*)?" defer><\/script>)/,'<script src="academy-data.js" defer></script><script src="academy-render.js" defer></script>$1');
+ return h.replace('</head>','<link rel="stylesheet" href="academy-content.css"></head>');
+}
+let author=fs.readFileSync(file('author.html'),'utf8');
+const photo=author.match(/<div class="founder-photo reveal">[\s\S]*?<\/div>/)[0];
+const authorContent=`<!-- academy-author-start --><section class="section founder" id="founder">${photo}<div class="founder-copy academy-author-intro" id="academy-author-0">${f.author[0]}</div></section>`+f.author.slice(1).map((html,i)=>`<section class="section academy-article"><div id="academy-author-${i+1}">${html}</div>${i===2?`<blockquote class="academy-quote" id="academy-author-quote">${f.authorQuote}</blockquote>`:''}</section>`).join('')+'<!-- academy-author-end -->';
+if(author.includes('<!-- academy-author-start -->'))author=author.replace(/<!-- academy-author-start -->[\s\S]*?<!-- academy-author-end -->/,authorContent);
+else author=author.replace(/<section class="section founder"[\s\S]*?<\/section>/,authorContent);
+author=author.replace(/<p class="lead" data-n="authorExtra">[\s\S]*?<\/p>/,'');
+author=enhanceHead(author).replace(/(<meta name="description" content=")[^"]*/,`$1${c.content.en.author[0].paragraphs[0]}`);
+fs.writeFileSync(file('author.html'),author);
+let tasting=fs.readFileSync(file('tastings.html'),'utf8');
+const main=`<main id="main"><section class="section page-intro academy-intro" id="academy-tasting-intro">${f.tastingIntro}</section><div class="section academy-programmes" id="themes">${f.programmes}</div><section class="section academy-method" id="academy-method">${f.method}</section><section class="section academy-private" id="academy-private">${f.private}</section></main>`;
+tasting=enhanceHead(tasting.replace(/<main id="main">[\s\S]*?<\/main>/,main)).replace(/(<meta name="description" content=")[^"]*/,`$1${c.content.en.tasting.intro[0]}`);
+fs.writeFileSync(file('tastings.html'),tasting);
+let js=fs.readFileSync(file('website.js'),'utf8');
+js=js.replace(/window\.renderAcademyContent\?\.\(lang\);\n?/g,'');
+js=js.replace("document.querySelectorAll('a[href]').forEach", "window.renderAcademyContent?.(lang);\ndocument.querySelectorAll('a[href]').forEach");
+fs.writeFileSync(file('website.js'),js);
+let modal=fs.readFileSync(file('topics-modal.js'),'utf8');
+modal=modal.replace("const p=document.createElement('p');p.textContent=text;return p","const p=document.createElement('p');p.textContent=text;if(text===topic[lang][0])p.className='topic-subtitle';return p");
+modal=modal.replace(/  const link=document.createElement\('a'\);[^\n]+sources.replaceChildren\(link\);/,"  sources.replaceChildren();");
+fs.writeFileSync(file('topics-modal.js'),modal);
+console.log('Applied author narrative, 16 grouped programmes and shared modal descriptions.');
