@@ -14,11 +14,11 @@ assert.equal(group.children.at(-1),ua);assert.ok(educational.href.endsWith('?lan
 for(const lang of ['en','de','fr','it','uk']){doc.documentElement.lang=lang;events['wa:language']();assert.ok(cta.textContent.length>15);assert.ok(dialog.children.every(b=>b.attrs['aria-label']))}
 assert.equal(cta.textContent,'Познайомитися зі зразками колекції');
 observers[0].cb([{isIntersecting:true}]);assert.equal(timers.size,1);const tick=[...timers.values()][0];timers.clear();tick.f();assert.equal(dots[1].attrs['aria-pressed'],'true');
-gallery.emit('mouseenter');assert.equal(timers.size,0);gallery.emit('mouseleave');assert.equal(timers.size,1);
+gallery.matches=()=>true;gallery.contains=()=>true;gallery.emit('mouseenter');assert.equal(timers.size,1);gallery.emit('focusin');assert.equal(timers.size,1);gallery.emit('click');assert.equal(timers.size,1);
 footer.children[0].emit('click');assert.equal(timers.size,0);footer.children[0].emit('click');assert.equal(timers.size,1);
 gate.hidden=false;events['wa:age-state']();assert.equal(timers.size,0);gate.hidden=true;events['wa:age-state']();assert.equal(timers.size,1);
 doc.hidden=true;events['doc:visibilitychange']();assert.equal(timers.size,0);doc.hidden=false;events['doc:visibilitychange']();assert.equal(timers.size,1);
 media.matches=true;media.change();assert.equal(timers.size,0);
 photoButtons[1].emit('click');dialog.children[1].emit('click');assert.equal(image.src,'photo-2.webp');dialog.children[1].emit('click');assert.equal(image.src,'photo-0.webp');dialog.emit('keydown',{key:'ArrowLeft',preventDefault(){}});assert.equal(image.src,'photo-2.webp');
 dialog.emit('pointerdown',{pointerType:'touch',clientX:150,clientY:30});dialog.emit('pointerup',{clientX:30,clientY:35});assert.equal(image.src,'photo-0.webp');
-console.log('PASS: UA last, five translated CTAs, education at page start, automatic slides with hover/manual/visibility/age/reduced-motion pauses, lightbox arrows/wrap/keyboard/swipe.');
+console.log('PASS: UA last, five translated CTAs, education at page start, automatic slides with manual/visibility/age/reduced-motion pauses; autoplay continues under hover/focus, lightbox arrows/wrap/keyboard/swipe.');

@@ -7,28 +7,32 @@
   fr:{collection:'Découvrir une sélection de Whiskies de la collection',prev:'Photo précédente',next:'Photo suivante',pause:'Suspendre le défilement automatique des photos',play:'Reprendre le défilement automatique des photos'},
   it:{collection:'Scopri una selezione di Whisky della collezione',prev:'Foto precedente',next:'Foto successiva',pause:'Sospendi il cambio automatico delle foto',play:'Riprendi il cambio automatico delle foto'}
  };
+ const navigationWords={en:['Home','Footer navigation'],de:['Startseite','Navigation im Seitenfuss'],uk:['Головна','Навігація внизу сторінки'],fr:['Accueil','Navigation de pied de page'],it:['Home','Navigazione a piè di pagina']};
  const t=()=>words[document.documentElement.lang]||words.en;
  const icon=direction=>'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+(direction==='prev'?'M20 12H4m6-6-6 6 6 6':'M4 12h16m-6-6 6 6-6 6')+'"/></svg>';
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const allowed=()=>document.getElementById('ageGate')?.hidden!==false;
  function localize(){
+  const labels=navigationWords[document.documentElement.lang]||navigationWords.en;
+  document.querySelectorAll('[data-home-link]').forEach(a=>a.textContent=labels[0]);
+  document.querySelector('.footer-nav')?.setAttribute('aria-label',labels[1]);
   document.querySelectorAll('.languages').forEach(group=>{const ua=group.querySelector('[data-lang="uk"]');if(!ua||ua===group.lastElementChild)return;const separator=ua.previousElementSibling;group.append(separator,ua)});
   const link=document.querySelector('#homeCollectionCta a');if(link){const svg=link.querySelector('svg');link.textContent=t().collection;if(svg)link.append(svg)}
   const educational=document.querySelectorAll('#homeFormats a')[3];if(educational){const u=new URL(educational.href);u.hash='main';educational.href=u.href}
   document.querySelectorAll('[data-lightbox-direction]').forEach(b=>b.setAttribute('aria-label',t()[b.dataset.lightboxDirection]));
   if(pause)pause.setAttribute('aria-label',t()[stopped?'play':'pause']);
  }
- // Autoplay only while the gallery is visible and unattended.
+ // Pointer position and focused dots do not silently disable autoplay.
  const gallery=document.getElementById('author-moments');let pause=null,stopped=reduced.matches,visible=false,timer=null;
  if(gallery){
   pause=document.createElement('button');pause.type='button';pause.className='author-autoplay';
   const paint=()=>{pause.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+(stopped?'M9 5v14l11-7z':'M8 5v14M16 5v14')+'"/></svg>';pause.setAttribute('aria-label',t()[stopped?'play':'pause'])};
   const stopTimer=()=>{clearTimeout(timer);timer=null};
-  const schedule=()=>{stopTimer();if(stopped||!visible||document.hidden||!allowed()||gallery.matches(':hover')||gallery.contains(document.activeElement))return;timer=setTimeout(()=>{const dots=[...gallery.querySelectorAll('[data-author-index]')];const index=dots.findIndex(d=>d.getAttribute('aria-pressed')==='true');dots[(index+1)%dots.length]?.click();schedule()},6000)};
+  const schedule=()=>{stopTimer();if(stopped||!visible||document.hidden||!allowed())return;timer=setTimeout(()=>{const dots=[...gallery.querySelectorAll('[data-author-index]')];const index=dots.findIndex(d=>d.getAttribute('aria-pressed')==='true');dots[(index+1)%dots.length]?.click();schedule()},6000)};
   pause.addEventListener('click',()=>{stopped=!stopped;paint();schedule()});gallery.querySelector('.author-gallery-footer').append(pause);paint();
   gallery.querySelector('output')?.setAttribute('aria-live','off');
   const io=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule()},{threshold:.25});io.observe(gallery);
-  ['mouseenter','focusin'].forEach(e=>gallery.addEventListener(e,stopTimer));['mouseleave','focusout','click'].forEach(e=>gallery.addEventListener(e,schedule));
+  gallery.addEventListener('click',schedule);
   document.addEventListener('visibilitychange',schedule);window.addEventListener('wa:age-state',schedule);reduced.addEventListener('change',()=>{stopped=reduced.matches;paint();schedule()});
  }
  // Reuse the existing native dialog; keep its close button and focus restoration.
@@ -43,11 +47,12 @@
  }
  window.addEventListener('wa:language',localize);localize();
  // Original low-resolution colour field, inspired by flowing silk.
- const fields=[];
+ const fields=[];let previousAnimated=null;
  document.querySelectorAll('main section').forEach(section=>{
+  if(section.classList.contains('home-invitation')||previousAnimated?.nextElementSibling===section)return;
   const rgb=getComputedStyle(section).backgroundColor.match(/[\d.]+/g)?.map(Number);
   if(!rgb||rgb[0]<25||rgb[1]<=rgb[0]||rgb[1]<=rgb[2]||rgb[3]===0)return;
-  section.classList.add('amber-silk');const canvas=document.createElement('canvas');canvas.className='amber-canvas';canvas.width=192;canvas.height=112;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
+  section.classList.add('amber-silk');previousAnimated=section;const canvas=document.createElement('canvas');canvas.className='amber-canvas';canvas.width=192;canvas.height=112;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
   const field={section,canvas,ctx,pixels:ctx.createImageData(192,112),visible:false};fields.push(field);
  });
  function draw(f,time){const d=f.pixels.data;let i=0;for(let y=0;y<112;y++)for(let x=0;x<192;x++){
