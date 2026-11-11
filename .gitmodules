@@ -1,0 +1,4 @@
+[submodule "site"]
+    path = site
+    url = https://github.com/fonBehemoth/WHISKY-ACADEMY.git
+    branch = codex/site-backup-20261111
