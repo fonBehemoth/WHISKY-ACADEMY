@@ -23,4 +23,5 @@ require('./apply-author-slideshow.cjs');
 require('./apply-new-collection.cjs');
 require('./apply-tasting-gallery.cjs');
 require('./apply-five-languages.cjs');
+require('./apply-nov11-interactions.cjs');
 require('./version-site.cjs');

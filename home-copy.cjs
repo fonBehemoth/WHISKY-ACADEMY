@@ -74,7 +74,7 @@ module.exports={
       "Four Whisky bottles from the personal collection",
       "Haig Dimple with a tasting glass"
     ],
-    "collectionCta": "Discover the collection",
+    "collectionCta": "Explore selected Whiskies from the collection",
     "founderLabel": "The founder",
     "founderTitle": "A Collector’s Passion. A Shared Discovery.",
     "founderParagraphs": [
@@ -184,7 +184,7 @@ module.exports={
       "Vier Whiskyflaschen aus der privaten Sammlung",
       "Haig Dimple mit einem Degustationsglas"
     ],
-    "collectionCta": "Die Sammlung entdecken",
+    "collectionCta": "Ausgewählte Whiskys der Sammlung entdecken",
     "founderLabel": "Der Gründer",
     "founderTitle": "Die Leidenschaft eines Sammlers. Gemeinsame Entdeckungen.",
     "founderParagraphs": [
@@ -294,7 +294,7 @@ module.exports={
       "Чотири пляшки Віскі з особистої колекції",
       "Haig Dimple з дегустаційним келихом"
     ],
-    "collectionCta": "Познайомитися з колекцією",
+    "collectionCta": "Познайомитися зі зразками колекції",
     "founderLabel": "Засновник",
     "founderTitle": "Захоплення колекціонера. Спільні відкриття.",
     "founderParagraphs": [

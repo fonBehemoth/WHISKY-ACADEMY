@@ -1,0 +1,14 @@
+/* Subtle amber silk; content remains on its own layer. */
+.amber-silk{position:relative;isolation:isolate;background:#14110e!important}
+.amber-silk>.amber-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1;opacity:.62}
+.amber-silk{background-image:radial-gradient(ellipse at 80% 30%,#332218,transparent 70%)!important}
+main img:not(.amber-canvas){transition:transform .65s ease;transform-origin:center}
+@media(hover:hover){main img:hover{transform:scale(1.035)}}
+.author-gallery-image,.experience-photo,.founder-photo,.collection-image{overflow:hidden}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:48px;height:48px;border:1px solid #bba46b;background:#111310e8;color:#eee9dd;cursor:pointer;z-index:3}
+.lightbox-nav svg,.author-autoplay svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5}
+.lightbox-prev{left:10px}.lightbox-next{right:10px}
+.lightbox-nav:focus-visible,.author-autoplay:focus-visible{outline:2px solid #eee9dd;outline-offset:3px}
+.author-gallery-footer .author-autoplay{width:36px;height:36px;border:1px solid var(--line);color:var(--gold)}
+@media(max-width:540px){.lightbox-nav{width:44px;height:44px}.lightbox-prev{left:4px}.lightbox-next{right:4px}}
+@media(prefers-reduced-motion:reduce){main img{transition:none!important}main img:hover{transform:none!important}}
