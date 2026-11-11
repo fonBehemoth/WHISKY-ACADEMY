@@ -1,0 +1,55 @@
+const page=Number(document.body.dataset.page);let language='en',interest='tasting';
+const supportedLanguages=['en','de','uk','fr','it'];
+const validLanguage=value=>typeof value==='string'&&supportedLanguages.includes(value);
+function initialLanguage(query,saved){return validLanguage(query)?query:validLanguage(saved)?saved:'en'}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function richText(value){return escapeHtml(value).replace(/&lt;(br|em|\/em)&gt;/g,'<$1>')}
+const safeRead=(store,key)=>{try{return store.getItem(key)}catch{return null}};
+const arrow='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
+const fill=(id,value)=>{const el=document.getElementById(id);if(el)el.innerHTML=value};
+function render(lang){if(!validLanguage(lang))return;language=lang;const t=copy[lang],n=pagesCopy[lang];document.documentElement.lang=lang;document.title=n.pageNames[page]+' | OM WHISKY ACADEMY';document.querySelector('meta[name=description]').content=page===1?n.authorIntro:page===4?n.projectsText:page===5?n.linkwoodText:page===6?n.contactsNote:n.collectionIntro;
+document.querySelectorAll('[data-t]').forEach(el=>el.innerHTML=richText(t[el.dataset.t]||''));document.querySelectorAll('[data-n]').forEach(el=>el.textContent=n[el.dataset.n]);document.querySelectorAll('[data-fact]').forEach(el=>el.textContent=n.facts[el.dataset.fact]);document.querySelectorAll('[data-nav]').forEach(el=>el.textContent=n.nav[el.dataset.nav]);document.querySelectorAll('[data-page-title]').forEach(el=>el.textContent=n.pageNames[page]);document.querySelectorAll('[data-name]').forEach(el=>el.textContent=t.personName);document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.lang===lang)));
+document.querySelectorAll('[data-hero-fact]').forEach(el=>el.textContent=(t.heroFacts||n.facts)[el.dataset.heroFact]);
+fill('themes',n.themes.map((title,i)=>`<button type="button" class="theme-trigger" data-theme="${i}" aria-haspopup="dialog" aria-controls="topicDialog"><span class="theme-number">0${i+1}</span><span class="theme-name">${escapeHtml(title)}</span>${arrow}</button>`).join(''));
+fill('specs',n.labels.map((label,i)=>`<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(n.values[i])}</dd></div>`).join(''));
+fill('experienceGrid',t.experiences.map((x,i)=>`<article class="experience-card"><div class="experience-photo"><img src="${/^[a-z-]+\.jpg$/.test(x[4])?x[4]:'glass.jpg'}" alt="${escapeHtml(x[0])}" loading="lazy"></div><span class="experience-number">0${i+1}</span><h3>${escapeHtml(x[0])}</h3><p>${escapeHtml(x[1])}</p><a class="text-link" href="contact.html?lang=${lang}">${escapeHtml(x[2])}${arrow}</a></article>`).join(''));
+fill('faqRows',t.faqs.map(x=>`<details><summary>${escapeHtml(x[0])}${arrow}</summary><p>${escapeHtml(x[1])}</p></details>`).join(''));
+fill('interestOptions',Object.entries(t.interests).map(([key,value])=>`<button type="button" data-choice="${escapeHtml(key)}" aria-pressed="${key===interest}">${escapeHtml(value)}</button>`).join(''));
+if(page===6){document.querySelector('[data-t=formNote]').textContent=n.contactsNote;document.getElementById('formStatus').textContent=''}
+window.renderHomePage?.(lang);
+window.renderAcademyContent?.(lang);
+document.querySelectorAll('a[href]').forEach(a=>{const u=new URL(a.getAttribute('href'),location.href);if(u.origin===location.origin&&u.pathname.endsWith('.html')){u.searchParams.set('lang',lang);const release=document.querySelector('meta[name="wa-release"]')?.content;if(release)u.searchParams.set('v',release);a.setAttribute('href',u.pathname.split('/').pop()+u.search+u.hash)}});
+document.querySelector('.menu').setAttribute('aria-label',t.menuLabel);document.querySelector('.skip').textContent=t.skipLabel;document.querySelector('.back-top').setAttribute('aria-label',t.topLabel);document.getElementById('nav').setAttribute('aria-label',t.navLabel);document.querySelectorAll('.languages').forEach(el=>el.setAttribute('aria-label',t.languageLabel));document.querySelector('.lightbox-close').setAttribute('aria-label',t.closePhoto);document.getElementById('lightbox').setAttribute('aria-label',t.photoDialog);
+document.querySelectorAll('[data-photo]').forEach(el=>el.setAttribute('aria-label',t.photoLabel));
+document.querySelectorAll('[data-t=founderP1]').forEach(el=>el.textContent=n.authorExtra);
+const imageAlts={'hero.png':0,'founder.jpg':3,'founder-blue-blazer.jpg':3,'collection.jpg':4,'table.jpg':5,'glass.jpg':6,'bottle.jpg':7,'bottle-light.jpg':8};document.querySelectorAll('main img').forEach(el=>{const index=imageAlts[el.getAttribute('src')];if(index!==undefined)el.alt=photoTranslations[lang][index]});
+try{localStorage.setItem('wa-language',lang)}catch{}
+window.dispatchEvent(new CustomEvent('wa:language',{detail:lang}));
+}
+render(initialLanguage(new URLSearchParams(location.search).get('lang'),safeRead(localStorage,'wa-language')));
+const menu=document.querySelector('.menu'),nav=document.getElementById('nav');
+document.addEventListener('click',e=>{const lang=e.target.closest('[data-lang]');if(lang)render(lang.dataset.lang);const choice=e.target.closest('[data-choice]');if(choice&&Object.hasOwn(copy[language].interests,choice.dataset.choice)){interest=choice.dataset.choice;document.querySelectorAll('[data-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b===choice)))}});
+menu.onclick=()=>{menu.setAttribute('aria-expanded',String(nav.classList.toggle('open')))};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
+const header=document.getElementById('header');const headerState=()=>header.classList.toggle('scrolled',scrollY>40);window.addEventListener('scroll',headerState,{passive:true});headerState();
+const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('visible');observer.unobserve(item.target)}}),{threshold:.08});document.documentElement.classList.add('js');document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const lightbox=document.getElementById('lightbox');document.querySelectorAll('[data-photo]').forEach(b=>b.onclick=()=>{lightbox.querySelector('img').src=b.dataset.photo;lightbox.querySelector('img').alt=b.querySelector('img').alt;lightbox.showModal()});lightbox.querySelector('button').onclick=()=>lightbox.close();lightbox.onclick=e=>{if(e.target===lightbox)lightbox.close()};
+const enquiry=document.getElementById('enquiry');if(enquiry)enquiry.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(enquiry);const text=`OM WHISKY ACADEMY\n${copy[language].interests[interest]}\n\n${d.get('name')}\n${d.get('email')}\n\n${d.get('message')}\n`;const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='whisky-academy-enquiry.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById('formStatus').textContent=copy[language].formSuccess});
+function setGate(open){document.getElementById('ageGate').hidden=!open;document.body.classList.toggle('age-locked',open);document.querySelectorAll('body>header,body>main,body>footer,.skip').forEach(el=>el.inert=open);if(open)document.getElementById('ageYes').focus();else{const main=document.getElementById('main');main.setAttribute('tabindex','-1');main.focus({preventScroll:true})}window.dispatchEvent(new CustomEvent('wa:age-state',{detail:!open}))}
+document.getElementById('ageYes').onclick=()=>{try{sessionStorage.setItem('wa-adult-v1','yes');if(document.getElementById('ageRemember').checked)localStorage.setItem('wa-adult-v1','yes')}catch{}setGate(false)};
+document.getElementById('ageNo').onclick=()=>{document.getElementById('ageQuestion').hidden=true;document.getElementById('ageDeclined').hidden=false;document.getElementById('ageBack').focus()};document.getElementById('ageBack').onclick=()=>{document.getElementById('ageDeclined').hidden=true;document.getElementById('ageQuestion').hidden=false;document.getElementById('ageYes').focus()};
+document.getElementById('ageGate').addEventListener('keydown',e=>{if(e.key!=='Tab')return;const items=[...document.querySelectorAll('#ageGate button,#ageGate input')].filter(el=>el.getClientRects().length);const first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+setGate(!(safeRead(localStorage,'wa-adult-v1')==='yes'||safeRead(sessionStorage,'wa-adult-v1')==='yes'));
+
+
+
+
+
+
+
+
+
+
+// Local validation start
+function localValidation(){const t=copy[document.documentElement.lang]||copy.en;document.querySelectorAll('#enquiry input,#enquiry textarea').forEach(el=>{el.setCustomValidity('');if(el.validity.valueMissing)el.setCustomValidity(t.requiredMessage);else if(el.validity.typeMismatch)el.setCustomValidity(t.emailMessage)})}document.getElementById('enquiry')?.addEventListener('input',localValidation);document.getElementById('enquiry')?.addEventListener('invalid',localValidation,true);window.addEventListener('wa:language',localValidation);
+// Local validation end

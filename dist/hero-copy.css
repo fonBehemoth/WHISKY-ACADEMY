@@ -1,0 +1,8 @@
+/* User-approved expanded hero copy, 7 November 2026 */
+#home.hero{height:auto;min-height:100svh;max-height:none}
+#home .hero-content{max-width:1000px;padding-top:170px;padding-bottom:140px}
+#home h1{font-size:clamp(64px,6vw,104px);line-height:.98}
+#home .hero-sub{max-width:630px;font-size:15px;line-height:1.85;margin-top:26px}
+#home .facts.hero-facts{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;max-width:650px;font-size:12px;line-height:1.7;letter-spacing:.4px;margin:28px 0}
+#home .hero-buttons{margin-top:30px}#home .hero-buttons .button{text-transform:uppercase}
+@media(max-width:720px){#home .hero-content{max-width:100%;padding:155px 7% 125px}#home h1{font-size:clamp(54px,12vw,72px)}#home .hero-sub{max-width:100%;font-size:14px;line-height:1.8}#home .facts.hero-facts{max-width:100%;font-size:11px;gap:11px}#home .hero-buttons{margin-top:26px}}
