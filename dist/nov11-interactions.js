@@ -20,20 +20,17 @@
   const link=document.querySelector('#homeCollectionCta a');if(link){const svg=link.querySelector('svg');link.textContent=t().collection;if(svg)link.append(svg)}
   const educational=document.querySelectorAll('#homeFormats a')[3];if(educational){const u=new URL(educational.href);u.hash='main';educational.href=u.href}
   document.querySelectorAll('[data-lightbox-direction]').forEach(b=>b.setAttribute('aria-label',t()[b.dataset.lightboxDirection]));
-  if(pause)pause.setAttribute('aria-label',t()[stopped?'play':'pause']);
+  document.querySelectorAll('[data-author-step]').forEach(b=>b.setAttribute('aria-label',t()[Number(b.dataset.authorStep)<0?'prev':'next']));
  }
  // Pointer position and focused dots do not silently disable autoplay.
- const gallery=document.getElementById('author-moments');let pause=null,stopped=reduced.matches,visible=false,timer=null;
+ const gallery=document.getElementById('author-moments');let stopped=reduced.matches,visible=false,timer=null;
  if(gallery){
-  pause=document.createElement('button');pause.type='button';pause.className='author-autoplay';
-  const paint=()=>{pause.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+(stopped?'M9 5v14l11-7z':'M8 5v14M16 5v14')+'"/></svg>';pause.setAttribute('aria-label',t()[stopped?'play':'pause'])};
   const stopTimer=()=>{clearTimeout(timer);timer=null};
   const schedule=()=>{stopTimer();if(stopped||!visible||document.hidden||!allowed())return;timer=setTimeout(()=>{const dots=[...gallery.querySelectorAll('[data-author-index]')];const index=dots.findIndex(d=>d.getAttribute('aria-pressed')==='true');dots[(index+1)%dots.length]?.click();schedule()},6000)};
-  pause.addEventListener('click',()=>{stopped=!stopped;paint();schedule()});gallery.querySelector('.author-gallery-footer').append(pause);paint();
   gallery.querySelector('output')?.setAttribute('aria-live','off');
   const io=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule()},{threshold:.25});io.observe(gallery);
   gallery.addEventListener('click',schedule);
-  document.addEventListener('visibilitychange',schedule);window.addEventListener('wa:age-state',schedule);reduced.addEventListener('change',()=>{stopped=reduced.matches;paint();schedule()});
+  document.addEventListener('visibilitychange',schedule);window.addEventListener('wa:age-state',schedule);window.addEventListener('pageshow',schedule);reduced.addEventListener('change',()=>{stopped=reduced.matches;schedule()});
  }
  // Reuse the existing native dialog; keep its close button and focus restoration.
  const dialog=document.getElementById('lightbox');
@@ -52,13 +49,13 @@
   if(section.classList.contains('home-invitation')||previousAnimated?.nextElementSibling===section)return;
   const rgb=getComputedStyle(section).backgroundColor.match(/[\d.]+/g)?.map(Number);
   if(!rgb||rgb[0]<25||rgb[1]<=rgb[0]||rgb[1]<=rgb[2]||rgb[3]===0)return;
-  section.classList.add('amber-silk');previousAnimated=section;const canvas=document.createElement('canvas');canvas.className='amber-canvas';canvas.width=320;canvas.height=180;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
-  const field={section,canvas,ctx,pixels:ctx.createImageData(320,180),visible:false};fields.push(field);
+  section.classList.add('amber-silk');previousAnimated=section;const canvas=document.createElement('canvas');canvas.className='amber-canvas';const mobile=window.innerWidth<=720;canvas.width=mobile?192:320;canvas.height=mobile?112:180;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
+  const field={section,canvas,ctx,pixels:ctx.createImageData(canvas.width,canvas.height),visible:false};fields.push(field);
  });
  function draw(f,time){renderSilkFrame(f.pixels,f.canvas.width,f.canvas.height,time);f.ctx.putImageData(f.pixels,0,0)}
  let frame=0,last=0;
  function run(now){frame=0;if(document.hidden||!allowed()||reduced.matches||!fields.some(f=>f.visible))return;if(now-last>65){fields.filter(f=>f.visible).forEach(f=>draw(f,now/1000));last=now}frame=requestAnimationFrame(run)}
  function wake(){if(frame){cancelAnimationFrame(frame);frame=0}if(!document.hidden&&allowed()&&!reduced.matches&&fields.some(f=>f.visible))frame=requestAnimationFrame(run)}
  const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{const f=fields.find(f=>f.section===e.target);f.visible=e.isIntersecting});wake()});
- fields.forEach(f=>{draw(f,0);observer.observe(f.section)});document.addEventListener('visibilitychange',wake);window.addEventListener('wa:age-state',wake);reduced.addEventListener('change',wake);
+ fields.forEach(f=>{draw(f,0);observer.observe(f.section)});document.addEventListener('visibilitychange',wake);window.addEventListener('wa:age-state',wake);window.addEventListener('pageshow',wake);window.addEventListener('focus',wake);window.addEventListener('resize',wake);reduced.addEventListener('change',wake);
 })();
