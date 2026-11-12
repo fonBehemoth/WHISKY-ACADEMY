@@ -1,0 +1,6 @@
+/* Word masks preserve normal text flow, inline emphasis, spaces and explicit line breaks. */
+.editorial-word-mask{display:inline-block;overflow:clip;vertical-align:bottom;padding:.16em .06em;margin:-.16em -.06em}
+.editorial-word{display:inline-block;transform-origin:0 100%}
+.editorial-pending{opacity:0}
+@media(prefers-reduced-motion:reduce){.editorial-pending{opacity:1}.editorial-word{transform:none!important}}
+@media print{.editorial-pending{opacity:1!important}.editorial-word{transform:none!important;opacity:1!important}}
