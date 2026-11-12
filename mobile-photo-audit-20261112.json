@@ -1,0 +1,1280 @@
+[
+  {
+    "overflow": false,
+    "page": "index.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 184,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-01.webp",
+        "w": 330
+      },
+      {
+        "fit": "contain",
+        "h": 184,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-02.webp",
+        "w": 330
+      },
+      {
+        "fit": "contain",
+        "h": 184,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-03.webp",
+        "w": 330
+      },
+      {
+        "fit": "contain",
+        "h": 184,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-05.webp",
+        "w": 330
+      },
+      {
+        "fit": "contain",
+        "h": 323,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1200,
+        "src": "philosophy-20261112.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-09.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "collection-new-04.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 215,
+        "letterbox": false,
+        "nh": 1024,
+        "nw": 1536,
+        "src": "founder-blue-blazer.jpg",
+        "w": 323
+      },
+      {
+        "fit": "cover",
+        "h": 572,
+        "letterbox": false,
+        "nh": 720,
+        "nw": 536,
+        "src": "linkwood-promo-poster.jpg",
+        "w": 321
+      }
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "author.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 215,
+        "letterbox": false,
+        "nh": 1024,
+        "nw": 1536,
+        "src": "founder-blue-blazer.jpg",
+        "w": 323
+      }
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "collection.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 573,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 900,
+        "src": "collection-new-01.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 573,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 900,
+        "src": "collection-new-02.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-03.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "collection-new-04.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-05.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-06.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-07.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-08.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-09.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-10.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-11.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-12.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-13.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-14.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-15.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-16.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1280,
+        "nw": 960,
+        "src": "collection-new-17.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 430,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-19.webp",
+        "w": 323
+      }
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "tastings.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-01.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-02.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-03.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-04.webp",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 242,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-05.webp",
+        "w": 323
+      }
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "projects.html",
+    "photos": [
+      {
+        "fit": "cover",
+        "h": 572,
+        "letterbox": false,
+        "nh": 720,
+        "nw": 536,
+        "src": "linkwood-promo-poster.jpg",
+        "w": 321
+      }
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "project-linkwood.html",
+    "photos": [
+      {
+        "fit": "cover",
+        "h": 586,
+        "letterbox": false,
+        "nh": 640,
+        "nw": 352,
+        "src": "linkwood-film-poster.jpg",
+        "w": 323
+      },
+      {
+        "fit": "contain",
+        "h": 454,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-front.jpg",
+        "w": 303
+      },
+      {
+        "fit": "contain",
+        "h": 423,
+        "letterbox": false,
+        "nh": 1484,
+        "nw": 1060,
+        "src": "linkwood-back.jpg",
+        "w": 303
+      },
+      {
+        "fit": "contain",
+        "h": 454,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-design-board.jpg",
+        "w": 303
+      },
+      {
+        "fit": "contain",
+        "h": 454,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-early-label.jpg",
+        "w": 303
+      }
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "contact.html",
+    "photos": [],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "index.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 169,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-01.webp",
+        "w": 304
+      },
+      {
+        "fit": "contain",
+        "h": 169,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-02.webp",
+        "w": 304
+      },
+      {
+        "fit": "contain",
+        "h": 169,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-03.webp",
+        "w": 304
+      },
+      {
+        "fit": "contain",
+        "h": 169,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-05.webp",
+        "w": 304
+      },
+      {
+        "fit": "contain",
+        "h": 297,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1200,
+        "src": "philosophy-20261112.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-09.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "collection-new-04.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 198,
+        "letterbox": false,
+        "nh": 1024,
+        "nw": 1536,
+        "src": "founder-blue-blazer.jpg",
+        "w": 297
+      },
+      {
+        "fit": "cover",
+        "h": 526,
+        "letterbox": false,
+        "nh": 720,
+        "nw": 536,
+        "src": "linkwood-promo-poster.jpg",
+        "w": 295
+      }
+    ],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "author.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 198,
+        "letterbox": false,
+        "nh": 1024,
+        "nw": 1536,
+        "src": "founder-blue-blazer.jpg",
+        "w": 297
+      }
+    ],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "collection.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 528,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 900,
+        "src": "collection-new-01.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 528,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 900,
+        "src": "collection-new-02.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-03.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "collection-new-04.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-05.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-06.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-07.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-08.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-09.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-10.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-11.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-12.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-13.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-14.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-15.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-16.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1280,
+        "nw": 960,
+        "src": "collection-new-17.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 396,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-19.webp",
+        "w": 297
+      }
+    ],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "tastings.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-01.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-02.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-03.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-04.webp",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 223,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-05.webp",
+        "w": 297
+      }
+    ],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "projects.html",
+    "photos": [
+      {
+        "fit": "cover",
+        "h": 526,
+        "letterbox": false,
+        "nh": 720,
+        "nw": 536,
+        "src": "linkwood-promo-poster.jpg",
+        "w": 295
+      }
+    ],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "project-linkwood.html",
+    "photos": [
+      {
+        "fit": "cover",
+        "h": 539,
+        "letterbox": false,
+        "nh": 640,
+        "nw": 352,
+        "src": "linkwood-film-poster.jpg",
+        "w": 297
+      },
+      {
+        "fit": "contain",
+        "h": 415,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-front.jpg",
+        "w": 277
+      },
+      {
+        "fit": "contain",
+        "h": 387,
+        "letterbox": false,
+        "nh": 1484,
+        "nw": 1060,
+        "src": "linkwood-back.jpg",
+        "w": 277
+      },
+      {
+        "fit": "contain",
+        "h": 415,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-design-board.jpg",
+        "w": 277
+      },
+      {
+        "fit": "contain",
+        "h": 415,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-early-label.jpg",
+        "w": 277
+      }
+    ],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "contact.html",
+    "photos": [],
+    "width": 360
+  },
+  {
+    "overflow": false,
+    "page": "index.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 204,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-01.webp",
+        "w": 365
+      },
+      {
+        "fit": "contain",
+        "h": 204,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-02.webp",
+        "w": 365
+      },
+      {
+        "fit": "contain",
+        "h": 204,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-03.webp",
+        "w": 365
+      },
+      {
+        "fit": "contain",
+        "h": 204,
+        "letterbox": false,
+        "nh": 893,
+        "nw": 1600,
+        "src": "author-slide-20261110-05.webp",
+        "w": 365
+      },
+      {
+        "fit": "contain",
+        "h": 357,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1200,
+        "src": "philosophy-20261112.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-09.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "collection-new-04.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 238,
+        "letterbox": false,
+        "nh": 1024,
+        "nw": 1536,
+        "src": "founder-blue-blazer.jpg",
+        "w": 357
+      },
+      {
+        "fit": "cover",
+        "h": 585,
+        "letterbox": false,
+        "nh": 720,
+        "nw": 536,
+        "src": "linkwood-promo-poster.jpg",
+        "w": 329
+      }
+    ],
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "page": "author.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 238,
+        "letterbox": false,
+        "nh": 1024,
+        "nw": 1536,
+        "src": "founder-blue-blazer.jpg",
+        "w": 357
+      }
+    ],
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "page": "collection.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 635,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 900,
+        "src": "collection-new-01.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 635,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 900,
+        "src": "collection-new-02.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-03.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "collection-new-04.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-05.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-06.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-07.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-08.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-09.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-10.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-11.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-12.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-13.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-14.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-15.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-16.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1280,
+        "nw": 960,
+        "src": "collection-new-17.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 1200,
+        "nw": 1600,
+        "src": "collection-new-18.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 476,
+        "letterbox": false,
+        "nh": 1600,
+        "nw": 1200,
+        "src": "collection-new-19.webp",
+        "w": 357
+      }
+    ],
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "page": "tastings.html",
+    "photos": [
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-01.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-02.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-03.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-04.webp",
+        "w": 357
+      },
+      {
+        "fit": "contain",
+        "h": 268,
+        "letterbox": false,
+        "nh": 960,
+        "nw": 1280,
+        "src": "tasting-20261110-05.webp",
+        "w": 357
+      }
+    ],
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "page": "projects.html",
+    "photos": [
+      {
+        "fit": "cover",
+        "h": 585,
+        "letterbox": false,
+        "nh": 720,
+        "nw": 536,
+        "src": "linkwood-promo-poster.jpg",
+        "w": 329
+      }
+    ],
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "page": "project-linkwood.html",
+    "photos": [
+      {
+        "fit": "cover",
+        "h": 640,
+        "letterbox": false,
+        "nh": 640,
+        "nw": 352,
+        "src": "linkwood-film-poster.jpg",
+        "w": 352
+      },
+      {
+        "fit": "contain",
+        "h": 505,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-front.jpg",
+        "w": 337
+      },
+      {
+        "fit": "contain",
+        "h": 472,
+        "letterbox": false,
+        "nh": 1484,
+        "nw": 1060,
+        "src": "linkwood-back.jpg",
+        "w": 337
+      },
+      {
+        "fit": "contain",
+        "h": 505,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-design-board.jpg",
+        "w": 337
+      },
+      {
+        "fit": "contain",
+        "h": 505,
+        "letterbox": false,
+        "nh": 1536,
+        "nw": 1024,
+        "src": "linkwood-early-label.jpg",
+        "w": 337
+      }
+    ],
+    "width": 430
+  },
+  {
+    "overflow": false,
+    "page": "contact.html",
+    "photos": [],
+    "width": 430
+  }
+]

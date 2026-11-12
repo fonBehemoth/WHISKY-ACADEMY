@@ -182,3 +182,5 @@
 470|Oleksandr Martynov dégustant du Whisky devant des étagères de bouteilles doucement éclairées|Oleksandr Martynov degusta Whisky davanti a scaffali di bottiglie illuminati da una luce soffusa
 
 471|Découvrir une sélection de Whiskies de la collection|Scopri una selezione di Whisky della collezione
+
+472|John Walker & Sons King George V dans son coffret de présentation|John Walker & Sons King George V nella sua confezione di presentazione

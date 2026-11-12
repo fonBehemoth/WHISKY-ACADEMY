@@ -1,4 +1,4 @@
-module.exports={
+module.exports = {
   "en": {
     "heroTitle": "The Art of<br>Understanding<br><em>Whisky</em>",
     "heroSub": "Explore the world of Whisky through exceptional collections, historical research and comparative tastings led by collector and educator Oleksandr Martynov.",
@@ -70,7 +70,7 @@ module.exports={
       "Whisky and tasting"
     ],
     "collectionAlts": [
-      "Johnnie Walker Swing with its presentation box",
+      "John Walker & Sons King George V in its presentation case",
       "Four Whisky bottles from the personal collection",
       "Haig Dimple with a tasting glass"
     ],
@@ -180,7 +180,7 @@ module.exports={
       "Whisky und Degustation"
     ],
     "collectionAlts": [
-      "Johnnie Walker Swing mit Präsentationsbox",
+      "John Walker & Sons King George V im Präsentationsetui",
       "Vier Whiskyflaschen aus der privaten Sammlung",
       "Haig Dimple mit einem Degustationsglas"
     ],
@@ -290,7 +290,7 @@ module.exports={
       "Віскі й дегустація"
     ],
     "collectionAlts": [
-      "Johnnie Walker Swing з презентаційною коробкою",
+      "John Walker & Sons King George V у презентаційному футлярі",
       "Чотири пляшки Віскі з особистої колекції",
       "Haig Dimple з дегустаційним келихом"
     ],

@@ -19,7 +19,7 @@ const photo=founder?.match(/<div class="founder-photo[^>]*>[\s\S]*?<\/div>/)?.[0
 const cities=community?.match(/<div class="cities[^>]*>[\s\S]*?<\/div><\/div>/)?.[0];
 const promo=h.match(/<div class="project-promo-wrap">[\s\S]*?<\/div><\/section>/)?.[0].replace(/<\/section>$/,'');
 if(!photo||!cities||!promo)throw Error('Existing homepage media or club counts missing');
-const images=['collection-new-03.webp','collection-new-18.webp','collection-new-04.webp'];
+const images=['collection-new-09.webp','collection-new-18.webp','collection-new-04.webp'];
 const gallery=images.map((src,i)=>`<figure><img src="${src}" data-home-collection-image="${i}" alt="${data.en.collectionAlts[i]}" loading="lazy"><figcaption data-home-collection-caption="${i}">${data.en.collectionCaptions[i]}</figcaption></figure>`).join('');
 const main='<main id="main">'+hero+
  `<div class="home-credentials" id="homeCredentials">${f.proofs}</div>`+

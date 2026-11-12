@@ -1,8 +1,11 @@
-/* Subtle amber silk; content remains on its own layer. */
-.amber-silk{position:relative;isolation:isolate;background:#1b2018!important}
-.amber-silk>.amber-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.75}
+/* Broad diffuse olive-to-amber light, moving on the compositor on mobile too. */
+.amber-silk{position:relative;isolation:isolate;overflow:hidden;background:#1b2018!important}
+.amber-silk>.amber-canvas{position:absolute;inset:-22%;width:144%;height:144%;pointer-events:none;z-index:0;opacity:.65;background:radial-gradient(ellipse at 25% 32%,#8b643d40 0%,#66533925 24%,transparent 58%),radial-gradient(ellipse at 78% 75%,#a4744533 0%,#5d503126 28%,transparent 62%),linear-gradient(125deg,#1b2018 5%,#343024 32%,#20271b 54%,#413326 76%,#1b2018 98%);filter:blur(24px);transform:translate3d(-5%,-3%,0) scale(1.05);animation:silk-soft-drift 84s ease-in-out infinite alternate;will-change:transform}
 .amber-silk>:not(.amber-canvas){position:relative;z-index:1}
-@media(max-width:720px){.amber-silk>.amber-canvas{opacity:.38}}
+.silk-paused>.amber-canvas{animation-play-state:paused}
+@keyframes silk-soft-drift{0%{transform:translate3d(-5%,-3%,0) scale(1.05) rotate(-4deg)}50%{transform:translate3d(2%,4%,0) scale(1.12) rotate(0deg)}100%{transform:translate3d(7%,-2%,0) scale(1.05) rotate(5deg)}}
+@media(max-width:720px){.amber-silk>.amber-canvas{opacity:.55;filter:blur(20px)}}
+@media(prefers-reduced-motion:reduce){.amber-silk>.amber-canvas{animation:none;will-change:auto}}
 .logo-sheen{position:relative;display:inline-grid;line-height:0;flex:none}
 .wordmark>.logo-sheen{display:inline-grid;margin:0;align-self:center}
 .logo-sheen:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 40%,#fffbe8d9 49%,transparent 58%);background-size:320% 100%;background-position:150% 0;mask:url('brand-symbol-008.svg') center/contain no-repeat;-webkit-mask:url('brand-symbol-008.svg') center/contain no-repeat;animation:logo-light-sweep 9s cubic-bezier(.4,0,.2,1) infinite}
@@ -29,3 +32,15 @@ main img:not(.amber-canvas){transition:transform .65s ease;transform-origin:cent
 .author-gallery-footer .author-autoplay{width:36px;height:36px;border:1px solid var(--line);color:var(--gold)}
 @media(max-width:540px){.lightbox-nav{width:44px;height:44px}.lightbox-prev{left:4px}.lightbox-next{right:4px}}
 @media(prefers-reduced-motion:reduce){main img{transition:none!important}main img:hover{transform:none!important}}
+/* Mobile photographs retain their own proportions, without letterbox panels. */
+@media(max-width:720px){
+ .founder .founder-photo,.home-founder .founder-photo{height:auto;min-height:0;align-self:start}
+ .founder .founder-photo img,.home-founder .founder-photo img{display:block;width:100%;height:auto;min-height:0;max-height:none;object-fit:contain}
+ .home-philosophy>img{height:auto;max-height:none;aspect-ratio:auto}
+ .tasting-photo-grid button{height:auto;aspect-ratio:auto;background:transparent}
+ .tasting-photo-grid img{display:block;width:100%;height:auto;max-height:none}
+ .new-collection-grid .gallery-item{background:transparent}
+ .author-gallery-image{background:transparent}
+ .linkwood-art{height:auto;aspect-ratio:auto}
+ .linkwood-art img{display:block;width:100%;height:auto;max-height:none}
+}
