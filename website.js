@@ -32,7 +32,7 @@ document.addEventListener('click',e=>{const lang=e.target.closest('[data-lang]')
 menu.onclick=()=>{menu.setAttribute('aria-expanded',String(nav.classList.toggle('open')))};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
 const header=document.getElementById('header');const headerState=()=>header.classList.toggle('scrolled',scrollY>40);window.addEventListener('scroll',headerState,{passive:true});headerState();
-const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('visible');observer.unobserve(item.target)}}),{threshold:.08});document.documentElement.classList.add('js');document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
 const lightbox=document.getElementById('lightbox');document.querySelectorAll('[data-photo]').forEach(b=>b.onclick=()=>{lightbox.querySelector('img').src=b.dataset.photo;lightbox.querySelector('img').alt=b.querySelector('img').alt;lightbox.showModal()});lightbox.querySelector('button').onclick=()=>lightbox.close();lightbox.onclick=e=>{if(e.target===lightbox)lightbox.close()};
 const enquiry=document.getElementById('enquiry');if(enquiry)enquiry.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(enquiry);const text=`OM WHISKY ACADEMY\n${copy[language].interests[interest]}\n\n${d.get('name')}\n${d.get('email')}\n\n${d.get('message')}\n`;const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='whisky-academy-enquiry.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById('formStatus').textContent=copy[language].formSuccess});
 function setGate(open){document.getElementById('ageGate').hidden=!open;document.body.classList.toggle('age-locked',open);document.querySelectorAll('body>header,body>main,body>footer,.skip').forEach(el=>el.inert=open);if(open)document.getElementById('ageYes').focus();else{const main=document.getElementById('main');main.setAttribute('tabindex','-1');main.focus({preventScroll:true})}window.dispatchEvent(new CustomEvent('wa:age-state',{detail:!open}))}
@@ -40,6 +40,9 @@ document.getElementById('ageYes').onclick=()=>{try{sessionStorage.setItem('wa-ad
 document.getElementById('ageNo').onclick=()=>{document.getElementById('ageQuestion').hidden=true;document.getElementById('ageDeclined').hidden=false;document.getElementById('ageBack').focus()};document.getElementById('ageBack').onclick=()=>{document.getElementById('ageDeclined').hidden=true;document.getElementById('ageQuestion').hidden=false;document.getElementById('ageYes').focus()};
 document.getElementById('ageGate').addEventListener('keydown',e=>{if(e.key!=='Tab')return;const items=[...document.querySelectorAll('#ageGate button,#ageGate input')].filter(el=>el.getClientRects().length);const first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
 setGate(!(safeRead(localStorage,'wa-adult-v1')==='yes'||safeRead(sessionStorage,'wa-adult-v1')==='yes'));
+
+
+
 
 
 
