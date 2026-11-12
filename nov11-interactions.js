@@ -43,19 +43,15 @@
   dialog.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')start={x:e.clientX,y:e.clientY}});dialog.addEventListener('pointerup',e=>{if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;start=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5)show(current+(dx<0?1:-1))});dialog.addEventListener('pointercancel',()=>start=null);
  }
  window.addEventListener('wa:language',localize);localize();
- // Original low-resolution colour field, inspired by flowing silk.
- const fields=[];let previousAnimated=null;
+ // Compositor-driven soft colour movement: no canvas loop or viewport observer needed.
+ let previousAnimated=null;
  document.querySelectorAll('main section').forEach(section=>{
   if(section.classList.contains('home-invitation')||previousAnimated?.nextElementSibling===section)return;
   const rgb=getComputedStyle(section).backgroundColor.match(/[\d.]+/g)?.map(Number);
   if(!rgb||rgb[0]<25||rgb[1]<=rgb[0]||rgb[1]<=rgb[2]||rgb[3]===0)return;
-  section.classList.add('amber-silk');previousAnimated=section;const canvas=document.createElement('canvas');canvas.className='amber-canvas';const mobile=window.innerWidth<=720;canvas.width=mobile?192:320;canvas.height=mobile?112:180;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
-  const field={section,canvas,ctx,pixels:ctx.createImageData(canvas.width,canvas.height),visible:false};fields.push(field);
+  section.classList.add('amber-silk');previousAnimated=section;
+  const field=document.createElement('div');field.className='amber-canvas';field.setAttribute('aria-hidden','true');section.prepend(field);
  });
- function draw(f,time){renderSilkFrame(f.pixels,f.canvas.width,f.canvas.height,time);f.ctx.putImageData(f.pixels,0,0)}
- let frame=0,last=0;
- function run(now){frame=0;if(document.hidden||!allowed()||reduced.matches||!fields.some(f=>f.visible))return;if(now-last>65){fields.filter(f=>f.visible).forEach(f=>draw(f,now/1000));last=now}frame=requestAnimationFrame(run)}
- function wake(){if(frame){cancelAnimationFrame(frame);frame=0}if(!document.hidden&&allowed()&&!reduced.matches&&fields.some(f=>f.visible))frame=requestAnimationFrame(run)}
- const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{const f=fields.find(f=>f.section===e.target);f.visible=e.isIntersecting});wake()});
- fields.forEach(f=>{draw(f,0);observer.observe(f.section)});document.addEventListener('visibilitychange',wake);window.addEventListener('wa:age-state',wake);window.addEventListener('pageshow',wake);window.addEventListener('focus',wake);window.addEventListener('resize',wake);reduced.addEventListener('change',wake);
+ function backgroundState(){document.querySelectorAll('.amber-silk').forEach(s=>s.classList.toggle('silk-paused',document.hidden||!allowed()))}
+ document.addEventListener('visibilitychange',backgroundState);window.addEventListener('wa:age-state',backgroundState);window.addEventListener('pageshow',backgroundState);backgroundState();
 })();
