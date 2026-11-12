@@ -52,17 +52,10 @@
   if(section.classList.contains('home-invitation')||previousAnimated?.nextElementSibling===section)return;
   const rgb=getComputedStyle(section).backgroundColor.match(/[\d.]+/g)?.map(Number);
   if(!rgb||rgb[0]<25||rgb[1]<=rgb[0]||rgb[1]<=rgb[2]||rgb[3]===0)return;
-  section.classList.add('amber-silk');previousAnimated=section;const canvas=document.createElement('canvas');canvas.className='amber-canvas';canvas.width=192;canvas.height=112;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
-  const field={section,canvas,ctx,pixels:ctx.createImageData(192,112),visible:false};fields.push(field);
+  section.classList.add('amber-silk');previousAnimated=section;const canvas=document.createElement('canvas');canvas.className='amber-canvas';canvas.width=320;canvas.height=180;canvas.setAttribute('aria-hidden','true');section.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx)return;
+  const field={section,canvas,ctx,pixels:ctx.createImageData(320,180),visible:false};fields.push(field);
  });
- function draw(f,time){const d=f.pixels.data;let i=0;for(let y=0;y<112;y++)for(let x=0;x<192;x++){
-  const u=x/192,v=y/112;
-  const bend=u*7+v*3+Math.sin(v*5-time*.17)*1.8+Math.sin(u*4+time*.11);
-  const broad=(Math.sin(bend-time*.13)+1)/2;
-  const folds=Math.pow((Math.sin(bend*2.6+Math.sin(v*6+time*.09))+1)/2,4);
-  const light=.25*broad+.75*folds;
-  d[i++]=14+light*66;d[i++]=13+light*37;d[i++]=12+light*12;d[i++]=255;
- }f.ctx.putImageData(f.pixels,0,0)}
+ function draw(f,time){renderSilkFrame(f.pixels,f.canvas.width,f.canvas.height,time);f.ctx.putImageData(f.pixels,0,0)}
  let frame=0,last=0;
  function run(now){frame=0;if(document.hidden||!allowed()||reduced.matches||!fields.some(f=>f.visible))return;if(now-last>65){fields.filter(f=>f.visible).forEach(f=>draw(f,now/1000));last=now}frame=requestAnimationFrame(run)}
  function wake(){if(frame){cancelAnimationFrame(frame);frame=0}if(!document.hidden&&allowed()&&!reduced.matches&&fields.some(f=>f.visible))frame=requestAnimationFrame(run)}

@@ -9,8 +9,8 @@ for(const file of fs.readdirSync(dir).filter(f=>f.endsWith('.html'))){
  const footer='<nav class="footer-nav" aria-label="Footer navigation">'+home+menu[1]+'</nav>';
  if(file!=='index.html')h=h.replace(/(<nav id="nav"[^>]*>)/,'$1'+home);
  h=h.replace(/(<p data-t="footerLine">[\s\S]*?<\/p>)/,'$1'+footer);
- h=h.replace(/<(?:script|link)[^>]*(?:nov11-interactions\.js|nov11-effects\.css)[^>]*>(?:<\/script>)?/g,'');
- h=h.replace('</head>','<link rel="stylesheet" href="nov11-effects.css"><script src="nov11-interactions.js" defer></script></head>');
+ h=h.replace(/<(?:script|link)[^>]*(?:nov11-interactions\.js|nov11-effects\.css|silk-field\.js)[^>]*>(?:<\/script>)?/g,'');
+ h=h.replace('</head>','<link rel="stylesheet" href="nov11-effects.css"><script src="silk-field.js" defer></script><script src="nov11-interactions.js" defer></script></head>');
  fs.writeFileSync(dir+file,h);
 }
 console.log('Installed five-language interaction and amber background enhancements.');

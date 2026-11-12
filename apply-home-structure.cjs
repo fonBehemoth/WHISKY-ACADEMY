@@ -23,7 +23,7 @@ const images=['collection-new-03.webp','collection-new-18.webp','collection-new-
 const gallery=images.map((src,i)=>`<figure><img src="${src}" data-home-collection-image="${i}" alt="${data.en.collectionAlts[i]}" loading="lazy"><figcaption data-home-collection-caption="${i}">${data.en.collectionCaptions[i]}</figcaption></figure>`).join('');
 const main='<main id="main">'+hero+
  `<div class="home-credentials" id="homeCredentials">${f.proofs}</div>`+
- `<section class="section home-philosophy" id="philosophy"><div id="homePhilosophyCopy">${f.philosophy}</div><img src="philosophy-om-001.webp" data-home-image="philosophy" alt="${data.en.philosophyAlt}" loading="lazy" width="1200" height="1274"></section>`+
+ `<section class="section home-philosophy" id="philosophy"><div id="homePhilosophyCopy">${f.philosophy}</div><img src="philosophy-20261112.webp" data-home-image="philosophy" alt="${data.en.philosophyAlt}" loading="lazy" width="1200" height="1200"></section>`+
  `<section class="section home-tastings" id="experiences"><div class="home-section-intro" id="homeTastingCopy">${f.tastings}</div><div class="home-format-grid" id="homeFormats">${f.formats}</div><div id="homeTastingCta">${f.tastingCta}</div></section>`+
  `<section class="section home-collection" id="collection"><div class="home-section-intro" id="homeCollectionCopy">${f.collection}</div><div class="home-collection-grid">${gallery}</div><div id="homeCollectionCta">${f.collectionCta}</div></section>`+
  `<section class="section founder home-founder" id="founder">${photo}<div class="founder-copy" id="homeFounderCopy">${f.founder}</div></section>`+
