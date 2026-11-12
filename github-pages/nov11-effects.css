@@ -1,6 +1,17 @@
 /* Subtle amber silk; content remains on its own layer. */
 .amber-silk{position:relative;isolation:isolate;background:#1b2018!important}
-.amber-silk>.amber-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1;opacity:.85}
+.amber-silk>.amber-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.75}
+.amber-silk>:not(.amber-canvas){position:relative;z-index:1}
+@media(max-width:720px){.amber-silk>.amber-canvas{opacity:.38}}
+.logo-sheen{position:relative;display:inline-grid;line-height:0;flex:none}
+.wordmark>.logo-sheen{display:inline-grid;margin:0;align-self:center}
+.logo-sheen:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 40%,#fffbe8d9 49%,transparent 58%);background-size:320% 100%;background-position:150% 0;mask:url('brand-symbol-008.svg') center/contain no-repeat;-webkit-mask:url('brand-symbol-008.svg') center/contain no-repeat;animation:logo-light-sweep 9s cubic-bezier(.4,0,.2,1) infinite}
+footer .logo-sheen:after{animation-delay:2s}
+@keyframes logo-light-sweep{0%,55%{background-position:150% 0}85%,100%{background-position:-50% 0}}
+@media(prefers-reduced-motion:reduce){.logo-sheen:after{animation:none;background:none}}
+.author-gallery-footer .author-step{position:static;display:grid;place-items:center;width:40px;height:40px;flex:none;transform:none;border:1px solid var(--line);background:transparent;color:var(--gold)}
+.author-gallery-footer .author-step:hover{border-color:var(--gold)}
+.author-step svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.5}
 .home-invitation{background:#111310!important}
 footer .footer-nav{position:static;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:18px 30px;padding:28px 0 8px;margin:0;background:transparent;border:0}
 footer .footer-nav a{font-size:11px;letter-spacing:1.4px;line-height:1.8;text-transform:uppercase;color:var(--muted)}

@@ -8,3 +8,5 @@ __pycache__/
 .env
 .env.*
 /reference-background.html
+
+/reference-21tsi*

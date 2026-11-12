@@ -15,7 +15,7 @@ for(const lang of ['en','de','fr','it','uk']){doc.documentElement.lang=lang;even
 assert.equal(cta.textContent,'Познайомитися зі зразками колекції');
 observers[0].cb([{isIntersecting:true}]);assert.equal(timers.size,1);const tick=[...timers.values()][0];timers.clear();tick.f();assert.equal(dots[1].attrs['aria-pressed'],'true');
 gallery.matches=()=>true;gallery.contains=()=>true;gallery.emit('mouseenter');assert.equal(timers.size,1);gallery.emit('focusin');assert.equal(timers.size,1);gallery.emit('click');assert.equal(timers.size,1);
-footer.children[0].emit('click');assert.equal(timers.size,0);footer.children[0].emit('click');assert.equal(timers.size,1);
+assert.equal(footer.children.length,0);assert.equal(timers.size,1);
 gate.hidden=false;events['wa:age-state']();assert.equal(timers.size,0);gate.hidden=true;events['wa:age-state']();assert.equal(timers.size,1);
 doc.hidden=true;events['doc:visibilitychange']();assert.equal(timers.size,0);doc.hidden=false;events['doc:visibilitychange']();assert.equal(timers.size,1);
 media.matches=true;media.change();assert.equal(timers.size,0);
