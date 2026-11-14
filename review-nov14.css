@@ -1,0 +1,9 @@
+/* Approved text colour across all language versions. SVG artwork retains its palette. */
+:root{--white:#fff;--muted:#fff}
+body :is(h1,h2,h3,h4,h5,h6,p,a,span,strong,em,label,legend,li,dt,dd,figcaption,summary,button,input,textarea,select,output){color:#fff!important}
+body .button.solid,body .age-confirm{background:#393d31}
+.counter-digit{display:inline-block;height:1em;line-height:1;overflow:hidden;vertical-align:baseline;width:.58em;text-align:center}
+.counter-reel{display:block;will-change:transform}
+.counter-reel>span{display:block;height:1em;line-height:1}
+.city-number.counter-ready{line-height:1.15;font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){.counter-reel{will-change:auto}}
