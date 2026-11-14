@@ -24,8 +24,10 @@
     mask.append(reel);el.append(mask);
     const target=`translateY(-${steps/(steps+1)*100}%)`;
     const animation=reel.animate([{transform:'translateY(0)'},{transform:target}],{duration:1450+i*220,easing:'cubic-bezier(.2,.65,.25,1)',fill:'forwards'});
-    animation.onfinish=()=>{reel.style.transform=target;animation.cancel()};
-    reduced.addEventListener('change',()=>{if(reduced.matches){reel.style.transform=target;animation.cancel()}},{once:true});
+    // Retire the reel after settling: adjacent glyph overhangs must not remain visible.
+    const settle=()=>{animation.cancel();reel.textContent=digit;reel.style.transform='none'};
+    animation.onfinish=settle;
+    reduced.addEventListener('change',()=>{if(reduced.matches)settle()},{once:true});
    });
   });
  }
