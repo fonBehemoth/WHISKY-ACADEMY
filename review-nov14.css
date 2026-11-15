@@ -19,3 +19,13 @@ body .button.solid :is(span,svg){color:inherit}
 .counter-reel>span{display:block;height:1em;line-height:1;overflow:hidden}
 .city-number.counter-ready{line-height:1.15;font-variant-numeric:tabular-nums}
 @media(prefers-reduced-motion:reduce){.counter-reel{will-change:auto}}
+/* Compact footer: brand and credit left, navigation right. */
+body>footer{display:grid;grid-template-columns:minmax(240px,1fr) minmax(0,2fr);grid-template-areas:"brand nav" "credit nav" "bottom bottom";align-items:end;gap:12px 40px;padding:46px 6% 22px;border-top:0!important}
+body>footer>.wordmark{grid-area:brand;justify-self:start;margin-top:20px}
+body>footer>p{grid-area:credit;margin:0;align-self:start}
+body>footer>.footer-nav{grid-area:nav;justify-content:flex-end;align-self:center;padding:0;gap:16px 24px}
+body>footer>.footer-bottom{grid-area:bottom;margin-top:20px;padding-top:16px}
+body>footer:before,body>footer:after{display:none}
+body :is(h1,h2,h3,h4,h5,h6,.theme-name){text-transform:none}
+body h1 em,body h2 em,body h3 em{font-style:italic}
+@media(max-width:850px){body>footer{grid-template-columns:1fr;grid-template-areas:"nav" "brand" "credit" "bottom";gap:14px;padding:30px 7% 20px}body>footer>.footer-nav{justify-content:flex-start;display:flex}body>footer>.wordmark{margin-top:10px}}
