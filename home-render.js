@@ -4,10 +4,11 @@ function homeFragments(lang){
  const arrow='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
  const link=(href,label)=>`<a class="text-link" href="${href}">${esc(label)}${arrow}</a>`;
  const heading=(label,title)=>`<p class="eyebrow">${esc(label)}</p><h2>${esc(title)}</h2>`;
+ const whisky=s=>esc(s).replace(/Whisky|Віскі/g,word=>`<span class="accent-whisky">${word}</span>`);
  return {
   collectionLine:esc(d.heroCollectionLine),
   proofs:d.proofs.slice(1).map(p=>`<div class="hero-proof"><strong>${esc(p[0])}</strong><span>${esc(p[1])}</span></div>`).join(''),
-  philosophy:heading(d.philosophyLabel,d.philosophyTitle)+ps(d.philosophyParagraphs),
+  philosophy:`<p class="eyebrow">${esc(d.philosophyLabel)}</p><h2>${d.philosophyTitle.split(/\.\s*/).filter(Boolean).map(s=>`<span class="philosophy-phrase">${esc(s)}</span>`).join('')}</h2>`+ps(d.philosophyParagraphs),
   tastings:heading(d.tastingLabel,d.tastingTitle)+ps(d.tastingParagraphs),
   formats:d.formats.map((f,i)=>`<a class="home-format" href="tastings.html#${esc(i===3?'main':f[2])}"><span class="eyebrow">0${i+1}</span><h3>${esc(f[0])}</h3><p>${esc(f[1])}</p>${arrow}</a>`).join(''),
   tastingCta:link('tastings.html',d.tastingCta),
@@ -17,7 +18,7 @@ function homeFragments(lang){
   community:heading(d.communityLabel,d.communityTitle)+ps(d.communityParagraphs),
   communityFoot:`<p>${esc(d.communityRole)}</p>`+link('contact.html',d.communityCta),
   project:heading(d.projectLabel,d.projectTitle)+ps(d.projectParagraphs)+`<div class="home-project-facts">${d.projectFacts.map(s=>`<span>${esc(s)}</span>`).join('')}</div>`+link('project-linkwood.html',d.projectCta),
-  invitation:`<h2>${esc(d.invitationTitle)}</h2><p>${esc(d.invitationText)}</p><p class="home-invitation-closing">${esc(d.invitationClosing)}</p><a class="button solid" href="contact.html">${esc(d.invitationCta)}${arrow}</a>`
+  invitation:`<h2>${whisky(d.invitationTitle)}</h2><p>${esc(d.invitationText)}</p><p class="home-invitation-closing">${whisky(d.invitationClosing)}</p><a class="button solid" href="contact.html">${esc(d.invitationCta)}${arrow}</a>`
  };
 }
 if(typeof window!=='undefined')window.renderHomePage=lang=>{

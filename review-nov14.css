@@ -1,7 +1,19 @@
 /* Approved text colour across all language versions. SVG artwork retains its palette. */
 :root{--white:#fff;--muted:#fff}
-body :is(h1,h2,h3,h4,h5,h6,p,a,span,strong,em,label,legend,li,dt,dd,figcaption,summary,button,input,textarea,select,output){color:#fff!important}
-body .button.solid,body .age-confirm{background:#393d31}
+/* Inherit accent colours through reveal spans; keep body copy white. */
+body :is(p,li,dt,dd,figcaption,label,legend,input,textarea,select){color:#fff}
+body .editorial-word-mask,body .editorial-word{color:inherit}
+body :is(.eyebrow,.text-link,.hero-proof strong,.city-number,.accent-whisky){color:var(--gold)}
+body .counter-digit,body .counter-reel,body .counter-reel>span{color:inherit}
+body :is(button,.button,.icon-button,.back-top){color:var(--gold)}
+body .button.solid{background:var(--gold);color:var(--bg)}
+body .button.solid:hover{background:#d7bf86}
+body .button.solid :is(span,svg){color:inherit}
+.philosophy-phrase{display:block}
+.home-philosophy>div{min-width:0}
+.home-philosophy h2{font-size:clamp(32px,3vw,56px);line-height:1.12;text-wrap:balance;overflow-wrap:normal}
+.home-invitation-closing{color:#fff!important}
+@media(max-width:720px){.home-philosophy h2{font-size:clamp(32px,7vw,48px)}}
 .counter-digit{display:inline-block;height:1em;line-height:1;overflow:hidden;vertical-align:baseline;width:.58em;text-align:center}
 .counter-reel{display:block;will-change:transform}
 .counter-reel>span{display:block;height:1em;line-height:1;overflow:hidden}
